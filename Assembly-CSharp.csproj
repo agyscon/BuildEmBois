@@ -59,7 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BotMovement.cs" />
     <Compile Include="Assets\Scripts\MainMenuButtonHover.cs" />
+    <Compile Include="Assets\Scripts\MoveTarget.cs" />
     <Compile Include="Assets\Scripts\StartButton.cs" />
     <None Include="Assets\Fonts\read me.txt" />
     <Reference Include="Unity.PackageManagerUI.Editor">
