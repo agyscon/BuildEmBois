@@ -18,9 +18,6 @@ public class BotMovement: MonoBehaviour {
     void Start() {
         anim = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-        if (botMode == null) {
-            botMode = BotMode.Follow;
-        }
     }
 
     void Update() {
@@ -37,6 +34,8 @@ public class BotMovement: MonoBehaviour {
                 anim.SetBool("Walking", true);
             }
         }
+        anim.SetFloat("Y", navMeshAgent.velocity.magnitude / navMeshAgent.speed);
+        //anim.SetFloat("X", navMeshAgent.velocity.x);
     }
 
     // Takes a transform and turns it into a vector3 with y of 0
