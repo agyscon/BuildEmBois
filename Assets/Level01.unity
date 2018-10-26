@@ -1138,6 +1138,11 @@ Prefab:
       propertyPath: m_Name
       value: Entrance
       objectReference: {fileID: 0}
+    - target: {fileID: 23763325614097624, guid: 485ad5db6b604ec42aa088b1e26525ed,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3cf0d366a27f36241819d21611014832, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 485ad5db6b604ec42aa088b1e26525ed, type: 2}
   m_IsPrefabParent: 0

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 117
+  controlID: 15
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 140
+  controlID: 143
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 12
+  controlID: 81
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 848
     height: 339
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -282,8 +282,8 @@ MonoBehaviour:
     y: 339
     width: 848
     height: 392
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -503,10 +503,10 @@ MonoBehaviour:
     height: 370
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 86fbffff00000000
+    scrollPos: {x: 0, y: 80}
+    m_SelectedIDs: 142e0000
+    m_LastClickedID: 11796
+    m_ExpandedIDs: 5cf2ffffa4f2ffff000000001e2e0000422e00006c2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -602,19 +602,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefab
+    - Assets/Materials/Metal textures pack
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Materials/Metal textures pack
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Andrew Sheffield\Documents\GitHub\BuildEmBois
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90280000
-    m_LastClickedID: 10384
-    m_ExpandedIDs: 0000000098270000f227000000ca9a3bffffff7f
+    m_SelectedIDs: c42d0000
+    m_LastClickedID: 11716
+    m_ExpandedIDs: 00000000d62c0000fc2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098270000f2270000
+    m_ExpandedIDs: 00000000d62c0000fc2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 7c3e000040b0f4ffe804f6ff94380000c4370000fc2b0000362e0000d836000000000000000d00009af80000baf80000902c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -807,9 +807,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 13.243282, y: 16.405214, z: 48.67309}
+    m_Target: {x: -14.012504, y: 2.0119233, z: -7.0460787}
     speed: 2
-    m_Value: {x: 13.243282, y: 16.405214, z: 48.67309}
+    m_Value: {x: -14.012504, y: 2.0119233, z: -7.0460787}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -833,9 +833,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.11423081, y: 0.6477761, z: -0.099101685, w: -0.7466702}
+    m_Target: {x: -0.12256679, y: 0.78329355, z: -0.16352564, w: -0.58710134}
     speed: 2
-    m_Value: {x: -0.11423081, y: 0.6477761, z: -0.099101685, w: -0.7466702}
+    m_Value: {x: -0.12256679, y: 0.78329355, z: -0.16352564, w: -0.58710134}
   m_Size:
     m_Target: 17.14731
     speed: 2
