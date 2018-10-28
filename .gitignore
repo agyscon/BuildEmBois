@@ -1,3 +1,9 @@
 Temp/**
 obj/**
 Library/**
+.vs/**
+.vscode/**
+
+
+*.sln
+*.csproj
