@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\MovingPlatformScript.cs" />
     <Compile Include="Assets\Scripts\StartButton.cs" />
     <Compile Include="Assets\Scripts\TestCharController.cs" />
+    <Compile Include="Assets\Scripts\WorldOverlayScript.cs" />
     <None Include="Assets\Fonts\read me.txt" />
     <None Include="Assets\Shaders\NewSurfaceShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
