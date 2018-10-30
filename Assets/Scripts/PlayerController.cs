@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Vector3 jump;
-    public float jumpForce = 2.0f;
+    public float jumpForce = 5.0f;
 
     public bool isGrounded;
     Rigidbody rb;
+    Animator anim;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         jump = Vector3.up;
     }
 
@@ -30,6 +32,8 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
+
     }
 
     //This is a physics callback
