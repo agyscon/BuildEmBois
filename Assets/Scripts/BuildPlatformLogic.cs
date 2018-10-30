@@ -12,7 +12,6 @@ public class BuildPlatformLogic : MonoBehaviour {
 	void Start () {
         playerMask = LayerMask.GetMask("Player");
         layerNum = LayerMask.NameToLayer("Player");
-        transform.gameObject.GetComponent<MeshRenderer>().enabled = false;
         transform.gameObject.GetComponentInChildren<Light>().enabled = false;
         buildObject.SetActive(false);
     }
@@ -30,14 +29,13 @@ public class BuildPlatformLogic : MonoBehaviour {
                 buildObject.SetActive(false);
             }
         }
-
 		
 	}
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == layerNum)
         {
-            transform.gameObject.GetComponent<MeshRenderer>().enabled = true;
             transform.gameObject.GetComponentInChildren<Light>().enabled = true;
             inCollider = true;
         }
@@ -47,7 +45,6 @@ public class BuildPlatformLogic : MonoBehaviour {
     {
         if (other.gameObject.layer == layerNum)
         {
-            transform.gameObject.GetComponent<MeshRenderer>().enabled = false;
             transform.gameObject.GetComponentInChildren<Light>().enabled = false;
             inCollider = false;
         }

@@ -35,7 +35,6 @@ public class BotMovement: MonoBehaviour {
             }
         }
         anim.SetFloat("Y", navMeshAgent.velocity.magnitude / navMeshAgent.speed);
-        //anim.SetFloat("X", navMeshAgent.velocity.x);
     }
 
     // Takes a transform and turns it into a vector3 with y of 0
