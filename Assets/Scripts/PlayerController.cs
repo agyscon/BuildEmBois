@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (rb.velocity.y == 0)
+        {
+            isGrounded = true;
+        }
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
 
@@ -34,11 +38,5 @@ public class PlayerController : MonoBehaviour
         }
 
 
-    }
-
-    //This is a physics callback
-    void OnCollisionStay(Collision collision)
-    {
-        isGrounded = true;
     }
 }
