@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BotCollector : MonoBehaviour {
 
-    bool hasBot = false;
+    public int bots;
 
 	// Use this for initialization
 	void Start () {
-		
+        bots = 0;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +18,11 @@ public class BotCollector : MonoBehaviour {
 
     public void ReceiveBot()
     {
-        hasBot = true;
+        bots++;
+    }
+
+    public void LoseBot()
+    {
+        bots--;
     }
 }
