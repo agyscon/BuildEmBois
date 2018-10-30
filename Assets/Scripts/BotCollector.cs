@@ -16,13 +16,19 @@ public class BotCollector : MonoBehaviour {
 		
 	}
 
-    public void ReceiveBot()
+    public void ReceiveBots(int num)
     {
-        bots++;
+        for (int i = 0; i < 0; i++)
+        {
+            bots++;
+        }
     }
 
-    public void LoseBot()
+    public void LoseBots(int num)
     {
-        bots--;
+        for (int i = 0; i < 0; i++)
+        {
+            bots--;
+        }
     }
 }

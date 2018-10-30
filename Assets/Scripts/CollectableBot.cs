@@ -11,7 +11,7 @@ public class CollectableBot : MonoBehaviour {
             if (bc != null)
             {
                 //Destroy(this.gameObject);
-                bc.ReceiveBot();
+                bc.ReceiveBots(1);
             }
         }
     }
