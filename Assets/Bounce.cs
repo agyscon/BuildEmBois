@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour {
 
-    public int speed = 9000;
+    public int force = 9000;
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision c)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (c.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * speed);
+            c.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * force);
         }
     }
 }

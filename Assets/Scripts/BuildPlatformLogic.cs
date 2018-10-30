@@ -6,14 +6,18 @@ public class BuildPlatformLogic : MonoBehaviour {
     LayerMask playerMask;
     int layerNum;
     bool inCollider = false;
-    public GameObject buildObject;
+    public GameObject buildObject = null;
 
 	// Use this for initialization
 	void Start () {
         playerMask = LayerMask.GetMask("Player");
         layerNum = LayerMask.NameToLayer("Player");
         transform.gameObject.GetComponentInChildren<Light>().enabled = false;
-        buildObject.SetActive(false);
+        if (buildObject != null)
+        {
+            buildObject.SetActive(false);
+        }
+        
     }
 	
 	// Update is called once per frame
