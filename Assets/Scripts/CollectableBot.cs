@@ -10,7 +10,7 @@ public class CollectableBot : MonoBehaviour {
             BotCollector bc = other.attachedRigidbody.gameObject.GetComponent<BotCollector>();
             if (bc != null)
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 bc.ReceiveBot();
             }
         }
