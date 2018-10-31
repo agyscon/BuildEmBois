@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildObject: {fileID: 0}
+  botsNeeded: 1
+  overlay: {fileID: 1396671322087438, guid: 10e71f1713ad25a44bba2c229b8429bb, type: 2}
 --- !u!136 &136628020124935290
 CapsuleCollider:
   m_ObjectHideFlags: 1
