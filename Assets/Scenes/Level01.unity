@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2526,22 +2526,6 @@ OffMeshLink:
   m_BiDirectional: 1
   m_Activated: 1
   m_AutoUpdatePositions: 0
---- !u!1 &740194669 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
-    type: 2}
-  m_PrefabInternal: {fileID: 69787554}
---- !u!114 &740194670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 740194669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5263289445a58da4bbbb78942c34f895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &743740213
 Prefab:
   m_ObjectHideFlags: 0
@@ -2624,7 +2608,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4997790336246856, guid: d5e44ec7230817044bfd4c85126a2743, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -10.58
       objectReference: {fileID: 0}
     - target: {fileID: 4997790336246856, guid: d5e44ec7230817044bfd4c85126a2743, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6165,6 +6149,11 @@ Prefab:
     - target: {fileID: 136628020124935290, guid: 1c54c7973579965449a12cf7009d090d,
         type: 2}
       propertyPath: m_Height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605716106306418, guid: 1c54c7973579965449a12cf7009d090d,
+        type: 2}
+      propertyPath: botsNeeded
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []

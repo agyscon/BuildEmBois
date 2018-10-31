@@ -18,17 +18,16 @@ public class BotCollector : MonoBehaviour {
 
     public void ReceiveBots(int num)
     {
-        for (int i = 0; i < 0; i++)
-        {
-            bots++;
-        }
+        bots += num;
     }
 
     public void LoseBots(int num)
     {
-        for (int i = 0; i < 0; i++)
-        {
-            bots--;
-        }
+        bots -= num;
+    }
+
+    public int getBots()
+    {
+        return bots;
     }
 }

@@ -25,7 +25,7 @@ public class BuildPlatformLogic : MonoBehaviour
     {
         if (inCollider)
         {
-            if (Input.GetKeyDown("b") && player.bots >= botsNeeded)
+            if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded)
             {
                 buildObject.SetActive(true);
                 player.LoseBots(botsNeeded);
@@ -41,11 +41,15 @@ public class BuildPlatformLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == layerNum)
+        if (other.gameObject.CompareTag("Player"))
         {
             player = other.gameObject.GetComponent<BotCollector>();
-            transform.gameObject.GetComponentInChildren<Light>().enabled = true;
-            inCollider = true;
+            if (player != null)
+            {
+                transform.gameObject.GetComponentInChildren<Light>().enabled = true;
+                inCollider = true;
+            }
+            
         }
 
     }
