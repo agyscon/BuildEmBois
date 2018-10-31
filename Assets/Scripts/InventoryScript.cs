@@ -7,6 +7,7 @@ public class InventoryScript : MonoBehaviour {
     public GameObject[] bots;
     public int current;
 
+
 	// Use this for initialization
 	void Start () {
         current = 0;
@@ -18,5 +19,6 @@ public class InventoryScript : MonoBehaviour {
         bots[current] = newBot;
         current++;
     }
+
 
 }

@@ -4,15 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class WorldOverlayScript : MonoBehaviour {
-    private Text numBotsText;
+    public Text numBotsText;
+    public Text buttonPrompt;
 	// Use this for initialization
 	void Start () {
-        numBotsText = GetComponentInChildren<Text>();
 	}
 
-    void setNumBots(int n)
+    public void setNumBots(int n)
     {
-        numBotsText.text = "x" + n;
+        numBotsText.text = n + "";
+    }
+
+    public void setActiveButtonPrompt(bool isActive)
+    {
+        buttonPrompt.enabled = isActive;
     }
 
 

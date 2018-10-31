@@ -6,10 +6,14 @@ public class BotCollector : MonoBehaviour {
 
     public int bots;
 
-	// Use this for initialization
-	void Start () {
+    private WorldOverlayScript overlayScript;
+    public GameObject overlay;
+
+    // Use this for initialization
+    void Start () {
         bots = 0;
-	}
+        overlayScript = overlay.GetComponent<WorldOverlayScript>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,11 +23,13 @@ public class BotCollector : MonoBehaviour {
     public void ReceiveBots(int num)
     {
         bots += num;
+        overlayScript.setNumBots(bots);
     }
 
     public void LoseBots(int num)
     {
         bots -= num;
+        overlayScript.setNumBots(bots);
     }
 
     public int getBots()
