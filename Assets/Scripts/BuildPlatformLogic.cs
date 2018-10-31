@@ -10,6 +10,8 @@ public class BuildPlatformLogic : MonoBehaviour
     public GameObject buildObject;
     public int botsNeeded = 1;
     BotCollector player;
+    public GameObject overlay;
+    private WorldOverlayScript overlayScript;
 
     // Use this for initialization
     void Start()
@@ -18,6 +20,7 @@ public class BuildPlatformLogic : MonoBehaviour
         layerNum = LayerMask.NameToLayer("Player");
         transform.gameObject.GetComponentInChildren<Light>().enabled = false;
         buildObject.SetActive(false);
+        overlayScript = overlay.GetComponent<WorldOverlayScript>();
     }
 
     // Update is called once per frame
@@ -48,6 +51,7 @@ public class BuildPlatformLogic : MonoBehaviour
             {
                 transform.gameObject.GetComponentInChildren<Light>().enabled = true;
                 inCollider = true;
+                overlayScript.setActiveButtonPrompt(true);
             }
             
         }
@@ -60,6 +64,7 @@ public class BuildPlatformLogic : MonoBehaviour
             player = null;
             transform.gameObject.GetComponentInChildren<Light>().enabled = false;
             inCollider = false;
+            overlayScript.setActiveButtonPrompt(false);
         }
     }
 
