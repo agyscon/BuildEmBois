@@ -28,13 +28,27 @@ public class BotCollector : MonoBehaviour {
         overlayScript.setNumBots(bots);
     }
 
-    public void RegainBots()
+    public void RegainBots(int num, ArrayList botList)
     {
-        return;
+        //foreach (int bot in botList)
+        //{
+        //    print(bot);
+        //}
+        for (int i = 0; i < botList.Count; i++)
+        {
+            GameObject usedBot = totalBots[(int)botList[i]];
+            usedBot.SetActive(true);
+            usedBot.GetComponent<BotMovement>().SetState(BotMovement.BotMode.Follow);
+
+        }
+        bots += num;
+        overlayScript.setNumBots(bots);
+        
     }
 
-    public void LoseBots(int num)
+    public ArrayList LoseBots(int num)
     {
+        ArrayList botsUsed = new ArrayList();
         int numToUse = num;
         for (int i = 0; i < totalBots.Count; i++)
         {
@@ -44,6 +58,7 @@ public class BotCollector : MonoBehaviour {
             {
                 botScript.SetState(BotMovement.BotMode.Build);
                 numToUse--;
+                botsUsed.Add(i);
                 if (numToUse == 0)
                 {
                     break;
@@ -52,6 +67,7 @@ public class BotCollector : MonoBehaviour {
         }
         bots -= num;
         overlayScript.setNumBots(bots);
+        return botsUsed;
     }
 
     public int getBots()

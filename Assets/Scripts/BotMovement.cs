@@ -37,11 +37,15 @@ public class BotMovement: MonoBehaviour {
                 navMeshAgent.SetDestination(flattenTransform(followTarget));
                 anim.SetBool("IsBlock", false);
                 anim.SetBool("Walking", true);
-            } else if (navMeshAgent.remainingDistance <= 0.9f) {
+            } else if (navMeshAgent.remainingDistance <= 5.9f) {
                 anim.SetBool("IsBlock", true);
             } else {
                 anim.SetBool("Walking", true);
             }
+        }
+        if (botMode == BotMode.Build)
+        {
+            transform.gameObject.SetActive(false);
         }
         anim.SetFloat("Y", navMeshAgent.velocity.magnitude / navMeshAgent.speed);
     }
@@ -62,7 +66,6 @@ public class BotMovement: MonoBehaviour {
                 BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
                 if (bc != null)
                 {
-                    Destroy(this.gameObject);
                     bc.ReceiveBots(1, transform.gameObject);
                 }
                 followTarget = c.attachedRigidbody.transform;

@@ -31,12 +31,20 @@ public class BuildPlatformLogic : MonoBehaviour
             if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded)
             {
                 buildObject.SetActive(true);
-                player.LoseBots(botsNeeded);
+                ArrayList botsUsed = player.LoseBots(botsNeeded);
+                transform.parent.gameObject.GetComponent<PadContainer>().addBots(botsUsed);
             }
             if (Input.GetKeyDown("v") && buildObject.activeSelf)
             {
                 buildObject.SetActive(false);
                 //player.ReceiveBots(botsNeeded);
+                print("reached");
+                ArrayList botIndices = transform.parent.GetComponent<PadContainer>().GetBotsList();
+                foreach (int bot in botIndices)
+                {
+                    print(bot);
+                }
+                player.RegainBots(botsNeeded, botIndices);
             }
         }
 
@@ -51,7 +59,8 @@ public class BuildPlatformLogic : MonoBehaviour
             {
                 transform.gameObject.GetComponentInChildren<Light>().enabled = true;
                 inCollider = true;
-                overlayScript.setActiveButtonPrompt(true);
+                overlayScript.setActiveButtonPrompt(true, botsNeeded);
+                
             }
             
         }
@@ -64,7 +73,7 @@ public class BuildPlatformLogic : MonoBehaviour
             player = null;
             transform.gameObject.GetComponentInChildren<Light>().enabled = false;
             inCollider = false;
-            overlayScript.setActiveButtonPrompt(false);
+            overlayScript.setActiveButtonPrompt(false, botsNeeded);
         }
     }
 
