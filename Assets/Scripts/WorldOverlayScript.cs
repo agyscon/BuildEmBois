@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WorldOverlayScript : MonoBehaviour {
     public Text numBotsText;
     public Text buttonPrompt;
+    public Text neededBots;
 	// Use this for initialization
 	void Start () {
 	}
@@ -15,8 +16,10 @@ public class WorldOverlayScript : MonoBehaviour {
         numBotsText.text = n + "";
     }
 
-    public void setActiveButtonPrompt(bool isActive)
+    public void setActiveButtonPrompt(bool isActive, int requiredBots)
     {
+        neededBots.enabled = isActive;
+        neededBots.text = "x" + requiredBots;
         buttonPrompt.enabled = isActive;
     }
 
