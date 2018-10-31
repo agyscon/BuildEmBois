@@ -36,7 +36,7 @@ public class BuildPlatformLogic : MonoBehaviour
             if (Input.GetKeyDown("v") && buildObject.activeSelf)
             {
                 buildObject.SetActive(false);
-                player.ReceiveBots(botsNeeded);
+                //player.ReceiveBots(botsNeeded);
             }
         }
 
