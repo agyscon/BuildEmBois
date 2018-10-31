@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\MainMenuButtonHover.cs" />
     <Compile Include="Assets\Scripts\MoveTarget.cs" />
     <Compile Include="Assets\Scripts\MovingPlatformScript.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\StartButton.cs" />
     <Compile Include="Assets\Scripts\TestCharController.cs" />
     <Compile Include="Assets\Scripts\WorldOverlayScript.cs" />
