@@ -42,4 +42,18 @@ public class BotMovement: MonoBehaviour {
         return new Vector3(transform.position.x, 0, transform.position.z);
     }
 
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.attachedRigidbody != null)
+        {
+            InventoryScript invent = c.attachedRigidbody.gameObject.GetComponent<InventoryScript>();
+            if (invent != null && botMode != BotMode.Follow)
+            {
+                botMode = BotMode.Follow;
+                invent.AddBot(gameObject);
+            }
+        }
+
+    }
+
 }

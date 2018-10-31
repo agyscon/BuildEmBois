@@ -64,6 +64,7 @@
     <Compile Include="Assets\Bounce.cs" />
     <Compile Include="Assets\Scripts\BotMovement.cs" />
     <Compile Include="Assets\Scripts\BuildPlatformLogic.cs" />
+    <Compile Include="Assets\Scripts\InventoryScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuButtonHover.cs" />
     <Compile Include="Assets\Scripts\MoveTarget.cs" />
     <Compile Include="Assets\Scripts\MovingPlatformScript.cs" />
