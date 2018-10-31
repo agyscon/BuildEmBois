@@ -4169,7 +4169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: {x: 0, y: 0, z: 0}
-  jumpForce: 4
+  jumpForce: 5
   isGrounded: 0
 --- !u!114 &1251090689
 MonoBehaviour:
@@ -4184,6 +4184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bots: 0
   overlay: {fileID: 951004394}
+  totalBots: []
 --- !u!114 &1251090691
 MonoBehaviour:
   m_ObjectHideFlags: 0

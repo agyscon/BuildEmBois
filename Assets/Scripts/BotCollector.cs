@@ -28,9 +28,22 @@ public class BotCollector : MonoBehaviour {
         overlayScript.setNumBots(bots);
     }
 
-    public void RegainBots()
+    public void RegainBots(int num, List<GameObject> botList)
     {
-        return;
+
+        for (int i = 0; i < botList.Count; i++)
+        {
+            for (int j = 0; j < totalBots.Count; j++)
+            {
+                if (botList[i].Equals(totalBots[j]))
+                {
+                    totalBots[i].GetComponent<BotMovement>().SetState(BotMovement.BotMode.Follow);
+                }
+
+            }
+        }
+        bots += num;
+        overlayScript.setNumBots(bots);
     }
 
     public void LoseBots(int num)

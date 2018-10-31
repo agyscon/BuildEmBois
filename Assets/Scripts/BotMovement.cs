@@ -31,17 +31,22 @@ public class BotMovement: MonoBehaviour {
     }
     void Update() {
         if (botMode == BotMode.Follow) {
+            transform.gameObject.SetActive(true);
             if (navMeshAgent.destination.x != followTarget.position.x || navMeshAgent.destination.z != followTarget.position.z) {
                 print(navMeshAgent.destination);
                 print(flattenTransform(followTarget));
                 navMeshAgent.SetDestination(flattenTransform(followTarget));
                 anim.SetBool("IsBlock", false);
                 anim.SetBool("Walking", true);
-            } else if (navMeshAgent.remainingDistance <= 0.9f) {
+            } else if (navMeshAgent.remainingDistance <= 2.9f) {
                 anim.SetBool("IsBlock", true);
             } else {
                 anim.SetBool("Walking", true);
             }
+        }
+        if (botMode == BotMode.Build)
+        {
+            transform.gameObject.SetActive(false);
         }
         anim.SetFloat("Y", navMeshAgent.velocity.magnitude / navMeshAgent.speed);
     }
@@ -62,7 +67,6 @@ public class BotMovement: MonoBehaviour {
                 BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
                 if (bc != null)
                 {
-                    Destroy(this.gameObject);
                     bc.ReceiveBots(1, transform.gameObject);
                 }
                 followTarget = c.attachedRigidbody.transform;
