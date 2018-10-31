@@ -50,6 +50,13 @@ public class BotMovement: MonoBehaviour {
             if (invent != null && botMode != BotMode.Follow)
             {
                 botMode = BotMode.Follow;
+                BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
+                if (bc != null)
+                {
+                    Destroy(this.gameObject);
+                    bc.ReceiveBots(1);
+                }
+                followTarget = c.attachedRigidbody.transform;
                 invent.AddBot(gameObject);
             }
         }
