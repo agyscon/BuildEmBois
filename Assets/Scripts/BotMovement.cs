@@ -29,17 +29,21 @@ public class BotMovement: MonoBehaviour {
     {
         return botMode;
     }
+
     void Update() {
         if (botMode == BotMode.Follow) {
             if (navMeshAgent.destination.x != followTarget.position.x || navMeshAgent.destination.z != followTarget.position.z) {
-                print(navMeshAgent.destination);
-                print(flattenTransform(followTarget));
                 navMeshAgent.SetDestination(flattenTransform(followTarget));
                 anim.SetBool("IsBlock", false);
                 anim.SetBool("Walking", true);
-            } else if (navMeshAgent.remainingDistance <= 5.9f) {
-                anim.SetBool("IsBlock", true);
+                if (navMeshAgent.isStopped) {
+                    anim.SetBool("Walking", false);
+                }
+            } else if (navMeshAgent.remainingDistance <= 3f) {
+                anim.SetBool("Walking", false);
+                navMeshAgent.isStopped = true;
             } else {
+                navMeshAgent.isStopped = false;
                 anim.SetBool("Walking", true);
             }
         }

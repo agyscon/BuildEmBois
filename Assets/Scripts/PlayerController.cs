@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.y == 0)
+        if (Mathf.Abs(rb.velocity.y) <= 0.05)
         {
             isGrounded = true;
         }

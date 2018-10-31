@@ -50,6 +50,9 @@ public class BotCollector : MonoBehaviour {
     {
         ArrayList botsUsed = new ArrayList();
         int numToUse = num;
+        if (num > bots) {
+            return null;
+        }
         for (int i = 0; i < totalBots.Count; i++)
         {
             GameObject bot = totalBots[i];
