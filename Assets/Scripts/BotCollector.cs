@@ -8,6 +8,7 @@ public class BotCollector : MonoBehaviour {
 
     private WorldOverlayScript overlayScript;
     public GameObject overlay;
+    public List<GameObject> totalBots = new List<GameObject>();
 
     // Use this for initialization
     void Start () {
@@ -20,14 +21,35 @@ public class BotCollector : MonoBehaviour {
 		
 	}
 
-    public void ReceiveBots(int num)
+    public void ReceiveBots(int num, GameObject bot)
     {
+        totalBots.Add(bot);
         bots += num;
         overlayScript.setNumBots(bots);
     }
 
+    public void RegainBots()
+    {
+        return;
+    }
+
     public void LoseBots(int num)
     {
+        int numToUse = num;
+        for (int i = 0; i < totalBots.Count; i++)
+        {
+            GameObject bot = totalBots[i];
+            BotMovement botScript = bot.GetComponent<BotMovement>();
+            if (botScript.GetState() == BotMovement.BotMode.Follow)
+            {
+                botScript.SetState(BotMovement.BotMode.Build);
+                numToUse--;
+                if (numToUse == 0)
+                {
+                    break;
+                }
+            }
+        }
         bots -= num;
         overlayScript.setNumBots(bots);
     }

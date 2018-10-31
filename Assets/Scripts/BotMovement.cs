@@ -5,14 +5,14 @@ using UnityEngine.AI;
 
 public class BotMovement: MonoBehaviour {
 
-    private enum BotMode {
-        Follow, Idle
+    public enum BotMode {
+        Follow, Idle, Build
     }
 
     [SerializeField] private BotMode botMode;
     [SerializeField] private Transform followTarget;
     private Animator anim;
-    private NavMeshAgent navMeshAgent;
+    private NavMeshAgent navMeshAgent; 
     
 
     void Start() {
@@ -20,6 +20,15 @@ public class BotMovement: MonoBehaviour {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
+    public void SetState(BotMode mode)
+    {
+        botMode = mode;
+    }
+
+    public BotMode GetState()
+    {
+        return botMode;
+    }
     void Update() {
         if (botMode == BotMode.Follow) {
             if (navMeshAgent.destination.x != followTarget.position.x || navMeshAgent.destination.z != followTarget.position.z) {
@@ -54,7 +63,7 @@ public class BotMovement: MonoBehaviour {
                 if (bc != null)
                 {
                     Destroy(this.gameObject);
-                    bc.ReceiveBots(1);
+                    bc.ReceiveBots(1, transform.gameObject);
                 }
                 followTarget = c.attachedRigidbody.transform;
                 invent.AddBot(gameObject);
