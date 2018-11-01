@@ -63,17 +63,12 @@ public class BotMovement: MonoBehaviour {
     {
         if (c.attachedRigidbody != null)
         {
-            InventoryScript invent = c.attachedRigidbody.gameObject.GetComponent<InventoryScript>();
-            if (invent != null && botMode != BotMode.Follow)
+            BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
+            if (bc != null && botMode != BotMode.Follow)
             {
                 botMode = BotMode.Follow;
-                BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
-                if (bc != null)
-                {
-                    bc.ReceiveBots(1, transform.gameObject);
-                }
+                bc.ReceiveBots(1, transform.gameObject);
                 followTarget = c.attachedRigidbody.transform;
-                invent.AddBot(gameObject);
             }
         }
 
