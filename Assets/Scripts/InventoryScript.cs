@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryScript : MonoBehaviour {
-    public int numBots;
-    public GameObject[] bots;
-    public int current;
 
+    public int numBots;
 
 	// Use this for initialization
 	void Start () {
-        current = 0;
-        bots = new GameObject[numBots];
+        numBots = 0;
 	}
 
-    public void AddBot(GameObject newBot)
+    public void AddBot()
     {
-        bots[current] = newBot;
-        current++;
+        numBots++;
+    }
+
+    public void LoseBot()
+    {
+        numBots--;
+    }
+
+    public int getBots()
+    {
+        return numBots;
     }
 
 
