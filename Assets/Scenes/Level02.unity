@@ -4496,7 +4496,7 @@ GameObject:
   - component: {fileID: 1147951725}
   - component: {fileID: 1147951724}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4511,8 +4511,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 0.8867924, g: 0.8656187, b: 0.7654859, a: 1}
-  m_Intensity: 4
+  m_Color: {r: 0.7647059, g: 0.8359103, b: 0.8862745, a: 1}
+  m_Intensity: 5
   m_Range: 200
   m_SpotAngle: 129.9
   m_CookieSize: 10
