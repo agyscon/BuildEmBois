@@ -73,7 +73,7 @@ public class BotMovement: MonoBehaviour {
                     bc.ReceiveBots(1, transform.gameObject);
                 }
                 followTarget = c.attachedRigidbody.transform;
-                invent.AddBot(gameObject);
+                invent.AddBot();
             }
         }
 
