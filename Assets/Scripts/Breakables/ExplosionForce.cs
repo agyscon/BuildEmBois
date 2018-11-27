@@ -9,7 +9,7 @@ public class ExplosionForce : MonoBehaviour {
     public float power = 10.0f;
     public float distanceInFront = 1.0f;
 
-    private int punchableLayer = 11;
+    private int punchableLayer = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +19,7 @@ public class ExplosionForce : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("h"))
+        if (Input.GetKeyDown("mouse 0"))
         {
             hitForce();
         }
