@@ -104,13 +104,10 @@ public class PlayerMovementControls : MonoBehaviour {
 
     private void Jump() {
         if (canJump) {
-            print("Jumping.");
             playerRigidbody.AddForce(Vector3.up * JUMP_FORCE, ForceMode.Impulse);
             canJump = false;
             jumpCooldownTimer = 1f;
             //anim.SetTrigger("Jump");
-        } else {
-            print("Can't jump.");
         }
     }
 
