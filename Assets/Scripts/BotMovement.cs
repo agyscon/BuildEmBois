@@ -41,15 +41,12 @@ public class BotMovement: MonoBehaviour {
                 if (navMeshAgent.isStopped) {
                     anim.SetBool("Walking", false);
                 }
-                print ("start follow");
             } else if (navMeshAgent.remainingDistance <= 3f) {
                 anim.SetBool("Walking", false);
                 navMeshAgent.isStopped = true;
-                print ("not following");
             } else {
                 navMeshAgent.isStopped = false;
                 anim.SetBool("Walking", true);
-                print ("is following");
             }
         }
         if (botMode == BotMode.Build)
