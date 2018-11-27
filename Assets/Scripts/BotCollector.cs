@@ -23,6 +23,7 @@ public class BotCollector : MonoBehaviour {
 
     public void ReceiveBots(int num, GameObject bot)
     {
+        bot.SetActive(false);
         totalBots.Add(bot);
         bots += num;
         overlayScript.setNumBots(bots);
