@@ -12,6 +12,7 @@ public class BuildPlatformLogic : MonoBehaviour
     BotCollector player;
     public GameObject overlay;
     private WorldOverlayScript overlayScript;
+    private PadContainer container;
 
     // Use this for initialization
     void Start()
@@ -21,6 +22,7 @@ public class BuildPlatformLogic : MonoBehaviour
         transform.gameObject.GetComponentInChildren<Light>().enabled = false;
         buildObject.SetActive(false);
         overlayScript = overlay.GetComponent<WorldOverlayScript>();
+        container = transform.parent.gameObject.GetComponent<PadContainer>();
     }
 
     // Update is called once per frame
@@ -28,18 +30,21 @@ public class BuildPlatformLogic : MonoBehaviour
     {
         if (inCollider)
         {
-            if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded)
+            if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded && !container.getIsBuilt())
             {
                 buildObject.SetActive(true);
                 ArrayList botsUsed = player.LoseBots(botsNeeded);
-                transform.parent.gameObject.GetComponent<PadContainer>().addBots(botsUsed);
+                container.addBots(botsUsed);
+                container.setIsBuilt(true);
+
             }
             if (Input.GetKeyDown("v") && buildObject.activeSelf)
             {
+                container.setIsBuilt(false);
                 buildObject.SetActive(false);
                 //player.ReceiveBots(botsNeeded);
                 print("reached");
-                ArrayList botIndices = transform.parent.GetComponent<PadContainer>().GetBotsList();
+                ArrayList botIndices = container.GetBotsList();
                 foreach (int bot in botIndices)
                 {
                     print(bot);
