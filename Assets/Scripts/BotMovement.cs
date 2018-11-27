@@ -13,7 +13,7 @@ public class BotMovement: MonoBehaviour {
     [SerializeField] private Transform followTarget;
     private Animator anim;
     private NavMeshAgent navMeshAgent; 
-    
+
 
     void Start() {
         anim = GetComponent<Animator>();
@@ -32,19 +32,24 @@ public class BotMovement: MonoBehaviour {
 
     void Update() {
         if (botMode == BotMode.Follow) {
-            if (navMeshAgent.destination.x != followTarget.position.x || navMeshAgent.destination.z != followTarget.position.z) {
-                navMeshAgent.SetDestination(flattenTransform(followTarget));
+            if (Vector3.Distance(FlattenTransform(followTarget.position), FlattenTransform(navMeshAgent.destination)) > 0.5f) {
+                if (!navMeshAgent.pathPending) {
+                    navMeshAgent.SetDestination(FlattenTransform(followTarget.position));
+                }
                 anim.SetBool("IsBlock", false);
                 anim.SetBool("Walking", true);
                 if (navMeshAgent.isStopped) {
                     anim.SetBool("Walking", false);
                 }
+                print ("start follow");
             } else if (navMeshAgent.remainingDistance <= 3f) {
                 anim.SetBool("Walking", false);
                 navMeshAgent.isStopped = true;
+                print ("not following");
             } else {
                 navMeshAgent.isStopped = false;
                 anim.SetBool("Walking", true);
+                print ("is following");
             }
         }
         if (botMode == BotMode.Build)
@@ -55,8 +60,8 @@ public class BotMovement: MonoBehaviour {
     }
 
     // Takes a transform and turns it into a vector3 with y of 0
-    private Vector3 flattenTransform(Transform transform) {
-        return new Vector3(transform.position.x, 0, transform.position.z);
+    private Vector3 FlattenTransform(Vector3 transform) {
+        return new Vector3(transform.x, 0, transform.z);
     }
 
     void OnTriggerEnter(Collider c)
