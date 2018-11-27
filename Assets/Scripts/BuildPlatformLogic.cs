@@ -55,7 +55,15 @@ public class BuildPlatformLogic : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) {
+        Activate(other);
+    }
+
+    private void OnTriggerStay(Collider other) {
+        Activate(other);
+    }
+
+    private void Activate(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

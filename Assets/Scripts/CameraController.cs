@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     private Vector3 cameraVector;
 
     void Awake() {
-        cameraVector = new Vector3(0f, 2f, -5f);
+        cameraVector = new Vector3(3f, 2f, -4f);
         playerMovementControls = playerTransform.gameObject.GetComponent<PlayerMovementControls>();
     }
 
