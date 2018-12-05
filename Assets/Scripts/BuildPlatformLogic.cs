@@ -40,16 +40,7 @@ public class BuildPlatformLogic : MonoBehaviour
             }
             if (Input.GetKeyDown("v") && buildObject.activeSelf)
             {
-                container.setIsBuilt(false);
-                buildObject.SetActive(false);
-                //player.ReceiveBots(botsNeeded);
-                print("reached");
-                ArrayList botIndices = container.GetBotsList();
-                foreach (int bot in botIndices)
-                {
-                    print(bot);
-                }
-                player.RegainBots(botsNeeded, botIndices);
+                deactivatePlatform(player);
             }
         }
 
@@ -88,6 +79,20 @@ public class BuildPlatformLogic : MonoBehaviour
             inCollider = false;
             overlayScript.setActiveButtonPrompt(false, botsNeeded);
         }
+    }
+
+    public void deactivatePlatform(BotCollector playerBotCollector)
+    {
+        container.setIsBuilt(false);
+        buildObject.SetActive(false);
+        //player.ReceiveBots(botsNeeded);
+        print("reached");
+        ArrayList botIndices = container.GetBotsList();
+        foreach (int bot in botIndices)
+        {
+            print(bot);
+        }
+        playerBotCollector.RegainBots(botIndices.Count, botIndices);
     }
 
 }

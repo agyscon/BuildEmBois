@@ -9,6 +9,7 @@ public class BotCollector : MonoBehaviour {
     private WorldOverlayScript overlayScript;
     public GameObject overlay;
     public List<GameObject> totalBots = new List<GameObject>();
+    public GameObject objectContainingPads;
 
     // Use this for initialization
     void Start () {
@@ -18,7 +19,15 @@ public class BotCollector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown("u"))
+        {
+            foreach(Transform child in objectContainingPads.transform)
+            {
+                Transform actualPadObject = child.GetChild(0);
+                BuildPlatformLogic platformScript = actualPadObject.GetComponent<BuildPlatformLogic>();
+                platformScript.deactivatePlatform(this);
+            }
+        }
 	}
 
     public void ReceiveBots(int num, GameObject bot)
