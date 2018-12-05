@@ -868,7 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bots: 0
-  overlay: {fileID: 0}
+  overlay: {fileID: 1396671322087438, guid: 10e71f1713ad25a44bba2c229b8429bb, type: 2}
   totalBots: []
 --- !u!135 &135276548165891556
 SphereCollider:
