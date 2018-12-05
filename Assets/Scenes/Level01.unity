@@ -10470,6 +10470,11 @@ Prefab:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114597671000126116, guid: 637e618273cdc6848bac3053ef4a85d2,
+        type: 2}
+      propertyPath: objectContainingPads
+      value: 
+      objectReference: {fileID: 621744293}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637e618273cdc6848bac3053ef4a85d2, type: 2}
   m_IsPrefabAsset: 0

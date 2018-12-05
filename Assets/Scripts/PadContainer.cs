@@ -30,6 +30,7 @@ public class PadContainer : MonoBehaviour {
             holder.Add(i);
         }
         //print(holder.Count);
+        botsList.Clear();
         return holder;
     }
 
