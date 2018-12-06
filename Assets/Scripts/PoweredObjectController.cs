@@ -17,7 +17,7 @@ public class PoweredObjectController : MonoBehaviour {
 
         bool allTrue = true;
         foreach (GameObject breaks in lineBreaks) {
-            if (!breaks.GetComponent<botBridge>().self.activeSelf)
+            if (!breaks.GetComponent<LineBreak>().self.activeSelf)
             {
                 allTrue = false;
             }
