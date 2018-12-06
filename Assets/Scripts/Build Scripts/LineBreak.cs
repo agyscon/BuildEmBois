@@ -9,7 +9,7 @@ public class LineBreak : MonoBehaviour {
     public GameObject bot;
     PoweredObjectController controller;
     bool inCollider = false;
-    InventoryScript player;
+    BotCollector player;
 
 
     // Use this for initialization
@@ -26,7 +26,7 @@ public class LineBreak : MonoBehaviour {
             if (Input.GetKeyDown("b") && player != null && player.getBots() > 0)
             {
                 bot.SetActive(true);
-                player.LoseBot();
+                //player.LoseBot();
                 controller.powerCheck();
 
                 // TODO: Bot animation here
@@ -34,7 +34,7 @@ public class LineBreak : MonoBehaviour {
             if (Input.GetKeyDown("v") && self.activeSelf)
             {
                 bot.SetActive(false);
-                player.AddBot();
+                //player.AddBot();
                 controller.powerCheck();
             }
         }
