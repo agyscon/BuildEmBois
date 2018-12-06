@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class botBridge : MonoBehaviour {
+public class LineBreak : MonoBehaviour {
 
     public GameObject self;
     public GameObject parent;
+    public GameObject bot;
     PoweredObjectController controller;
     bool inCollider = false;
     InventoryScript player;
 
 
     // Use this for initialization
-    void Start () {
-        self.SetActive(false);
+    void Start()
+    {
+        bot.SetActive(false);
         controller = parent.GetComponent<PoweredObjectController>();
-	}
+    }
 
-    private void Update() {
+    private void Update()
+    {
         if (inCollider)
         {
             if (Input.GetKeyDown("b") && player != null && player.getBots() > 0)
             {
-                self.SetActive(true);
+                bot.SetActive(true);
                 player.LoseBot();
                 controller.powerCheck();
 
@@ -30,7 +33,7 @@ public class botBridge : MonoBehaviour {
             }
             if (Input.GetKeyDown("v") && self.activeSelf)
             {
-                self.SetActive(false);
+                bot.SetActive(false);
                 player.AddBot();
                 controller.powerCheck();
             }
@@ -56,7 +59,4 @@ public class botBridge : MonoBehaviour {
         player = null;
         inCollider = false;
     }
-
-
-
 }
