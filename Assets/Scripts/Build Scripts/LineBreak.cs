@@ -45,7 +45,7 @@ public class LineBreak : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            player = other.gameObject.GetComponent<InventoryScript>();
+            //player = other.gameObject.GetComponent<InventoryScript>();
             if (player != null)
             {
                 inCollider = true;
