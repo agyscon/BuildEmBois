@@ -66,7 +66,7 @@ public class BotCollector : MonoBehaviour {
         {
             GameObject bot = totalBots[i];
             BotMovement botScript = bot.GetComponent<BotMovement>();
-            if (botScript.GetState() == BotMovement.BotMode.Follow)
+            if (botScript.GetState() == BotMovement.BotMode.Follow || botScript.GetState() == BotMovement.BotMode.Stopped)
             {
                 botScript.SetState(BotMovement.BotMode.Build);
                 numToUse--;
