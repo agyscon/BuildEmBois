@@ -45,7 +45,7 @@ public class BotMovement: MonoBehaviour {
                     anim.SetBool("Walking", false);
                     botMode = BotMode.Stopped;
                 }
-            } else if (navMeshAgent.remainingDistance <= 2f) {
+            } else if (navMeshAgent.remainingDistance <= 3f) {
                 anim.SetBool("Walking", false);
                 navMeshAgent.isStopped = true;
                 botMode = BotMode.Stopped;
@@ -84,6 +84,7 @@ public class BotMovement: MonoBehaviour {
             if (invent != null && botMode == BotMode.Idle)
             {
                 botMode = BotMode.Follow;
+                anim.SetTrigger("BootUp");
                 BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
                 if (bc != null)
                 {
