@@ -34,6 +34,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DistTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -54,6 +58,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WaterTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -69,8 +77,14 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TextureVisibility: 1
     - _UVSec: 0
+    - _WaterHeight: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.52205884, g: 1, b: 0.126, a: 1}
+    - _DistTiling: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.19257651, g: 0.6320754, b: 0, a: 1}
+    - _MoveDirection: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 1, a: 1}
+    - _WaterColor: {r: 0.56817377, g: 0.9056604, b: 0.5705466, a: 1}
