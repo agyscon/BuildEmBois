@@ -5,9 +5,12 @@ using UnityEngine;
 public class InitBreak : MonoBehaviour {
 
     public GameObject remains;
+    GameObject newObject;
 
 	// Use this for initialization
 	void Start () {
+        newObject = Instantiate(remains, transform.position, transform.rotation);
+        newObject.active = false;
 		
 	}
 	
@@ -17,7 +20,7 @@ public class InitBreak : MonoBehaviour {
 
     public GameObject breakObject()
     {
-        GameObject newObject = Instantiate(remains, transform.position, transform.rotation);
+        newObject.active = true;
         Destroy(transform.gameObject);
         return newObject;
     }
