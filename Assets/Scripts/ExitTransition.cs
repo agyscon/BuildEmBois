@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExitTransition : MonoBehaviour {
+
+    public int numBots = 7;
     
     void OnTriggerEnter(Collider c) {
         ExitConditions(c);
@@ -22,7 +24,7 @@ public class ExitTransition : MonoBehaviour {
     void ExitConditions(Collider c) {
         if (c.tag.Equals("Player")) {
             BotCollector playerInventory = c.GetComponent<BotCollector>();
-            if (playerInventory.getBots() == 7) {
+            if (playerInventory.getBots() == numBots) {
                 SceneManager.LoadScene("Congratulations");
             } else {
                 TipPanel.GetInstance().SetText("You're missing bots.");

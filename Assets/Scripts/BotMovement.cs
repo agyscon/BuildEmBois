@@ -66,7 +66,7 @@ public class BotMovement: MonoBehaviour {
         if (c.attachedRigidbody != null)
         {
             InventoryScript invent = c.attachedRigidbody.gameObject.GetComponent<InventoryScript>();
-            if (invent != null && botMode != BotMode.Follow)
+            if (invent != null && botMode == BotMode.Idle)
             {
                 botMode = BotMode.Follow;
                 BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
