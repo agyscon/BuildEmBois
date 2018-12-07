@@ -32,6 +32,7 @@ public class PlayerMovementControls : MonoBehaviour {
         } else {
             if (Mathf.Abs(playerRigidbody.velocity.y) <= 0.02) {
                 canJump = true;
+                anim.SetBool("Airborne", false);
             }
         }
         if (Input.GetKey("space")) {
@@ -50,6 +51,7 @@ public class PlayerMovementControls : MonoBehaviour {
         Vector3 inputVector = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         if (inputVector.magnitude == 0) {
             anim.SetBool("Walking", false);
+            anim.SetFloat("Y", 0f);
             return;
         } else {
             anim.SetBool("Walking", true);
@@ -81,6 +83,7 @@ public class PlayerMovementControls : MonoBehaviour {
         if (moveMagnitude < 0) {
             moveMagnitude = 0;
         }
+        anim.SetFloat("Y", moveMagnitude);
 
 
         // Complicated way of figuring out which way to turn. Only sort of works
@@ -107,7 +110,8 @@ public class PlayerMovementControls : MonoBehaviour {
             playerRigidbody.AddForce(Vector3.up * JUMP_FORCE, ForceMode.Impulse);
             canJump = false;
             jumpCooldownTimer = 1f;
-            //anim.SetTrigger("Jump");
+            anim.SetTrigger("JumpUp");
+            anim.SetBool("Airborne", true);
         }
     }
 

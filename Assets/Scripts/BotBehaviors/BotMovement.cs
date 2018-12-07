@@ -25,6 +25,11 @@ public class BotMovement: MonoBehaviour {
         jumping = false;
     }
 
+    void OnEnable() {
+        if (botMode != BotMode.Idle) {
+            anim.SetBool("BootUp", true);
+        }
+    }
     public void SetState(BotMode mode)
     {
         botMode = mode;
@@ -90,7 +95,7 @@ public class BotMovement: MonoBehaviour {
             if (/*invent != null &&*/ botMode == BotMode.Idle)
             {
                 botMode = BotMode.Follow;
-                anim.SetTrigger("BootUp");
+                anim.SetBool("BootUp", true);
                 BotCollector bc = c.attachedRigidbody.gameObject.GetComponent<BotCollector>();
                 if (bc != null)
                 {
