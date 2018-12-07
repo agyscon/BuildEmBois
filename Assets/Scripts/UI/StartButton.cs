@@ -10,6 +10,7 @@ public class StartButton : MonoBehaviour {
     // string name to be the next scene to switch to
     public void StartButtonPressed()
     {
+        print("Called");
         SceneManager.LoadScene(nextSceneName);
     }
 }
