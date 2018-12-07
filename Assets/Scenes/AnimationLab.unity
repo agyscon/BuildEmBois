@@ -103,7 +103,7 @@ NavMeshSettings:
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
+    maxJumpAcrossDistance: 5
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
@@ -156,6 +156,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -201,6 +206,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -248,6 +258,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -293,6 +308,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -340,6 +360,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -385,6 +410,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -498,6 +528,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -543,6 +578,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -590,6 +630,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -636,6 +681,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -678,21 +728,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4568498521705226, guid: 637e618273cdc6848bac3053ef4a85d2, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114597671000126116, guid: 637e618273cdc6848bac3053ef4a85d2,
-        type: 2}
-      propertyPath: overlay
-      value: 
-      objectReference: {fileID: 1396671322087438, guid: 10e71f1713ad25a44bba2c229b8429bb,
-        type: 2}
-    - target: {fileID: 95525569562827462, guid: 637e618273cdc6848bac3053ef4a85d2,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c79182c52fe817049b086f2ce4cce46a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637e618273cdc6848bac3053ef4a85d2, type: 2}
   m_IsPrefabAsset: 0
@@ -782,8 +817,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 284819474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 28, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -831,6 +866,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -876,6 +916,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -923,6 +968,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -968,6 +1018,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1105,6 +1160,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1150,6 +1210,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1197,6 +1262,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1242,6 +1312,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1289,6 +1364,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1334,6 +1414,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1381,6 +1466,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1426,6 +1516,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1473,6 +1568,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1518,6 +1618,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1565,6 +1670,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1610,6 +1720,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1657,6 +1772,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1702,6 +1822,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1749,6 +1874,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1794,6 +1924,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1841,6 +1976,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1886,6 +2026,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -1933,6 +2078,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -1978,6 +2128,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2025,9 +2180,101 @@ Prefab:
       propertyPath: m_Name
       value: Bot (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1403186394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403186398}
+  - component: {fileID: 1403186397}
+  - component: {fileID: 1403186396}
+  - component: {fileID: 1403186395}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!64 &1403186395
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403186394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1403186396
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403186394}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 0
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1403186397
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403186394}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1403186398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403186394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 1, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1420271668
 Prefab:
   m_ObjectHideFlags: 0
@@ -2070,6 +2317,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2117,6 +2369,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2162,6 +2419,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2209,6 +2471,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2254,6 +2521,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2301,6 +2573,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2346,6 +2623,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2393,6 +2675,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2438,6 +2725,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2485,6 +2777,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2531,6 +2828,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2576,6 +2878,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2728,6 +3035,11 @@ Prefab:
       propertyPath: m_Name
       value: Bot (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
@@ -2773,6 +3085,11 @@ Prefab:
     - target: {fileID: 1735541071482674, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
       propertyPath: m_Name
       value: Bot (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
@@ -2953,6 +3270,28 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9cab84f8d40ca8c4a90633be1549ab8a, type: 2}
+    - target: {fileID: 4048662435834746, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817495466796112, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064510973221568, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195079505829084632, guid: d1dae56dd0ef0f249a6ebcd35a62fb75,
+        type: 2}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dae56dd0ef0f249a6ebcd35a62fb75, type: 2}
   m_IsPrefabAsset: 0
