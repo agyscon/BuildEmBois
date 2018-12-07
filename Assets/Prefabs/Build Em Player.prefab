@@ -314,15 +314,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656424838671208}
-  m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: -4, y: 1, z: -9}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4970862058220630}
   - {fileID: 4462023829505928}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4791208128025456
 Transform:
   m_ObjectHideFlags: 1
@@ -824,7 +824,7 @@ Animator:
   m_GameObject: {fileID: 1656424838671208}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a48e32486e75dc44b63c963c15ea831, type: 2}
+  m_Controller: {fileID: 9100000, guid: c79182c52fe817049b086f2ce4cce46a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -870,6 +870,7 @@ MonoBehaviour:
   bots: 0
   overlay: {fileID: 1396671322087438, guid: 10e71f1713ad25a44bba2c229b8429bb, type: 2}
   totalBots: []
+  objectContainingPads: {fileID: 0}
 --- !u!135 &135276548165891556
 SphereCollider:
   m_ObjectHideFlags: 1
