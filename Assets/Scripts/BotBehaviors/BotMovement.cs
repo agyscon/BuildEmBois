@@ -85,8 +85,9 @@ public class BotMovement: MonoBehaviour {
     {
         if (c.gameObject.CompareTag("Player") && c.attachedRigidbody != null)
         {
-            InventoryScript invent = c.attachedRigidbody.gameObject.GetComponent<InventoryScript>();
-            if (invent != null && botMode == BotMode.Idle)
+            //NOTE: inventory script was deleted if more problems arise. This is what we changed
+            //InventoryScript invent = c.attachedRigidbody.gameObject.GetComponent<InventoryScript>();
+            if (/*invent != null &&*/ botMode == BotMode.Idle)
             {
                 botMode = BotMode.Follow;
                 anim.SetTrigger("BootUp");
@@ -96,7 +97,7 @@ public class BotMovement: MonoBehaviour {
                     bc.ReceiveBots(1, transform.gameObject);
                 }
                 followTarget = c.attachedRigidbody.transform;
-                invent.AddBot();
+                //invent.AddBot();
             }
         }
         else if (c.gameObject.CompareTag("BotPart") && botMode == BotMode.Follow)
