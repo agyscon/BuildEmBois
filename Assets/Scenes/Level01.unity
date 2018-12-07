@@ -5394,7 +5394,7 @@ Prefab:
     - target: {fileID: 114605716106306418, guid: 1c54c7973579965449a12cf7009d090d,
         type: 2}
       propertyPath: botsNeeded
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114605716106306418, guid: 1c54c7973579965449a12cf7009d090d,
         type: 2}
