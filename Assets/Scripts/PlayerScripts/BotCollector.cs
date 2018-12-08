@@ -35,6 +35,7 @@ public class BotCollector : MonoBehaviour {
         totalBots.Add(bot);
         bots += num;
         overlayScript.setNumBots(bots);
+        print("bot recieved");
     }
 
     public void RegainBots(int num, ArrayList botList)
