@@ -63,18 +63,23 @@ public class BuildPlatformLogic : MonoBehaviour
             if (Input.GetKeyDown("v") && buildObject.activeSelf)
             {
                 deactivatePlatform(player);
-                if (isSwitch)
-                {
-                    Material noCurrent = Resources.Load("NoCurrent") as Material;
-                    foreach (GameObject wire in wireWithotWithoutCurrent)
-                    {
-                        wire.GetComponent<MeshRenderer>().material = noCurrent;
-                    }
-                    bot.SetActive(false);
-                }
+                deactivateSwitch(player);
             }
         }
 
+    }
+
+    public void deactivateSwitch(BotCollector player)
+    {
+        if (isSwitch)
+        {
+            Material noCurrent = Resources.Load("NoCurrent") as Material;
+            foreach (GameObject wire in wireWithotWithoutCurrent)
+            {
+                wire.GetComponent<MeshRenderer>().material = noCurrent;
+            }
+            bot.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other) {

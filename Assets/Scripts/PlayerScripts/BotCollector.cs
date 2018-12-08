@@ -26,6 +26,7 @@ public class BotCollector : MonoBehaviour {
                 Transform actualPadObject = child.GetChild(0);
                 BuildPlatformLogic platformScript = actualPadObject.GetComponent<BuildPlatformLogic>();
                 platformScript.deactivatePlatform(this);
+                platformScript.deactivateSwitch(this);
             }
         }
 	}
