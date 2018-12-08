@@ -3684,6 +3684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numBots: 7
+  nextSceneName: Level02
 --- !u!4 &568626339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4720296568544392, guid: fc1393bc1310e914996e2989e5134d1c,
@@ -12623,12 +12624,12 @@ Prefab:
     - target: {fileID: 224240973433486484, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -88.3
+      value: -88.29999
       objectReference: {fileID: 0}
     - target: {fileID: 224240973433486484, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -17.04
+      value: -17.039978
       objectReference: {fileID: 0}
     - target: {fileID: 224240973433486484, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
@@ -12664,6 +12665,16 @@ Prefab:
         type: 2}
       propertyPath: m_UiScaleMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224174860441051456, guid: 10e71f1713ad25a44bba2c229b8429bb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -103.649994
+      objectReference: {fileID: 0}
+    - target: {fileID: 224174860441051456, guid: 10e71f1713ad25a44bba2c229b8429bb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.039978
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e71f1713ad25a44bba2c229b8429bb, type: 2}

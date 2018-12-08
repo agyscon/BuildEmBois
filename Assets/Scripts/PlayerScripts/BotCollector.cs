@@ -19,7 +19,7 @@ public class BotCollector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("u"))
+		if (Input.GetKeyDown("r"))
         {
             foreach(Transform child in objectContainingPads.transform)
             {
