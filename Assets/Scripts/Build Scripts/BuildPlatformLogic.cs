@@ -13,16 +13,28 @@ public class BuildPlatformLogic : MonoBehaviour
     public GameObject overlay;
     private WorldOverlayScript overlayScript;
     private PadContainer container;
+    private Light padLight;
+    public bool isSwitch = false;
+    public GameObject bot;
+    public GameObject[] wireWithotWithoutCurrent;
 
     // Use this for initialization
     void Start()
     {
         playerMask = LayerMask.GetMask("Player");
         layerNum = LayerMask.NameToLayer("Player");
-        transform.gameObject.GetComponentInChildren<Light>().enabled = false;
         buildObject.SetActive(false);
         overlayScript = overlay.GetComponent<WorldOverlayScript>();
         container = transform.parent.gameObject.GetComponent<PadContainer>();
+        padLight = transform.GetComponentInChildren<Light>();
+        if (isSwitch)
+        {
+            bot.SetActive(false);
+        }
+        if (padLight != null)
+        {
+            padLight.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -32,15 +44,34 @@ public class BuildPlatformLogic : MonoBehaviour
         {
             if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded && !container.getIsBuilt())
             {
+                print("whats going on");
                 buildObject.SetActive(true);
                 ArrayList botsUsed = player.LoseBots(botsNeeded);
                 container.addBots(botsUsed);
                 container.setIsBuilt(true);
+                if (isSwitch)
+                {
+                    Material current = Resources.Load("Current") as Material;
+                    foreach(GameObject wire in wireWithotWithoutCurrent)
+                    {
+                        wire.GetComponent<MeshRenderer>().material = current;
+                    }
+                    bot.SetActive(true);
+                }
 
             }
             if (Input.GetKeyDown("v") && buildObject.activeSelf)
             {
                 deactivatePlatform(player);
+                if (isSwitch)
+                {
+                    Material noCurrent = Resources.Load("NoCurrent") as Material;
+                    foreach (GameObject wire in wireWithotWithoutCurrent)
+                    {
+                        wire.GetComponent<MeshRenderer>().material = noCurrent;
+                    }
+                    bot.SetActive(false);
+                }
             }
         }
 
@@ -56,12 +87,16 @@ public class BuildPlatformLogic : MonoBehaviour
 
     private void Activate(Collider other)
     {
+        //print(other.gameObject.name + ": " + other.gameObject.tag);
         if (other.gameObject.CompareTag("Player"))
         {
             player = other.gameObject.GetComponent<BotCollector>();
             if (player != null)
             {
-                transform.gameObject.GetComponentInChildren<Light>().enabled = true;
+                if (padLight != null)
+                {
+                    padLight.enabled = true;
+                }
                 inCollider = true;
                 overlayScript.setActiveButtonPrompt(true, botsNeeded);
                 
@@ -72,10 +107,13 @@ public class BuildPlatformLogic : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == layerNum)
+        if (other.gameObject.CompareTag("Player"))
         {
             player = null;
-            transform.gameObject.GetComponentInChildren<Light>().enabled = false;
+            if (padLight != null)
+            {
+                padLight.enabled = false;
+            }
             inCollider = false;
             overlayScript.setActiveButtonPrompt(false, botsNeeded);
         }

@@ -30,7 +30,7 @@ public class ExplosionForce : MonoBehaviour {
     {
         Vector3 explosionPos = transform.forward * distanceInFront;
         Debug.DrawRay(transform.forward, explosionPos);
-        Debug.Log(transform.TransformPoint(transform.forward));
+        //Debug.Log(transform.TransformPoint(transform.forward));
         explosionPos = (transform.TransformPoint(explosionPos));
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         foreach (Collider hit in colliders)
@@ -58,7 +58,7 @@ public class ExplosionForce : MonoBehaviour {
                 {
                     counter++;
                     Rigidbody childRb = child.GetComponent<Rigidbody>();
-                    print(punchableLayer);
+                    //print(punchableLayer);
                     if (childRb != null && childRb.gameObject.layer == punchableLayer)
                     {
                         childRb.isKinematic = false;
@@ -67,12 +67,12 @@ public class ExplosionForce : MonoBehaviour {
                     }
 
                 }
-                print(counter);
+                //print(counter);
             }
 
             else
             {
-                Debug.Log("Well this sucks");
+                //Debug.Log("Well this sucks");
             }
         }
 
