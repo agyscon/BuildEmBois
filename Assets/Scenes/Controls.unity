@@ -785,8 +785,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The BuildEm Bois Factory is falling into ruin! Help the brave robot foreman
-    save his friends and escape the factory!
+  m_Text: 'WASD: Move
+
+    Space: Jump
+
+    B/V: Build/Debuild
+
+    R: Recall Bots
+
+    Left Click: Punch'
 --- !u!222 &1177329971
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1011,7 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d261b1620b77144a05295e86044121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Controls
+  nextSceneName: Level01
 --- !u!1 &1610400738
 GameObject:
   m_ObjectHideFlags: 0
