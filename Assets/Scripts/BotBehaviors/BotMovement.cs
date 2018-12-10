@@ -47,7 +47,7 @@ public class BotMovement: MonoBehaviour {
         if (botMode == BotMode.Follow) {
             if (Vector3.Distance(FlattenTransform(followTarget.position), FlattenTransform(navMeshAgent.destination)) > 0.5f) {
                 if (!navMeshAgent.pathPending) {
-                    navMeshAgent.SetDestination(FlattenTransform(followTarget.position));
+                    navMeshAgent.SetDestination((followTarget.position));
                 }
                 anim.SetBool("IsBlock", false);
                 anim.SetBool("Walking", true);
