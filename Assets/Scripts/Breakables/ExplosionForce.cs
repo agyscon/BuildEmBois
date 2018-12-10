@@ -8,6 +8,7 @@ public class ExplosionForce : MonoBehaviour {
     public float radius = 2.0f;
     public float power = 10.0f;
     public float distanceInFront = 1.0f;
+    public AudioClip punchSound;
 
     private int punchableLayer = 10;
 
@@ -22,6 +23,8 @@ public class ExplosionForce : MonoBehaviour {
         if (Input.GetKeyDown("mouse 0"))
         {
             hitForce();
+            Vector3 explosionPos = transform.forward * distanceInFront;
+            AudioSource.PlayClipAtPoint(punchSound, explosionPos);
         }
 		
 	}
