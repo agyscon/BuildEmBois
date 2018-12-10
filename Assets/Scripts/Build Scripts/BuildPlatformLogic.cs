@@ -135,7 +135,7 @@ public class BuildPlatformLogic : MonoBehaviour
         {
             print(bot);
         }
-        playerBotCollector.RegainBots(botIndices.Count, botIndices);
+        playerBotCollector.RegainBots(botIndices.Count, botIndices, transform.position);
     }
 
 }

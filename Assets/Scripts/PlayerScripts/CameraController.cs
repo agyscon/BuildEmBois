@@ -44,8 +44,8 @@ public class CameraController : MonoBehaviour {
         float magnitude = cameraVector.magnitude;
         xAngle += angle.x;
         yAngle += angle.y;
-        if (yAngle < -5f) {
-            yAngle += -5f - yAngle;
+        if (yAngle < 0f) {
+            yAngle += 0f - yAngle;
         } else if (yAngle > 60f) {
             yAngle -= yAngle - 60f ;
         }
