@@ -30,7 +30,7 @@ public class PlayerMovementControls : MonoBehaviour {
         if (jumpCooldownTimer >= 0) {
             jumpCooldownTimer -= Time.deltaTime;
         } else {
-            if (Mathf.Abs(playerRigidbody.velocity.y) <= 0.02) {
+            if (Mathf.Abs(playerRigidbody.velocity.y) <= 0.002) {
                 canJump = true;
                 anim.SetBool("Airborne", false);
             }
