@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour {
     void Awake() {
         Time.timeScale = 1f;
         paused = false;
+        Cursor.visible = false;
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
@@ -29,6 +30,8 @@ public class Pause : MonoBehaviour {
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         paused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void UnpauseMethod() {
@@ -37,6 +40,8 @@ public class Pause : MonoBehaviour {
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
         paused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
 }
