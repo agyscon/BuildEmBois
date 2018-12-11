@@ -116,7 +116,7 @@ public class PlayerMovementControls : MonoBehaviour {
         }
     }
 
-    private void Step()
+    public void Step()
     {
         Vector3 stepPos = transform.position;
         
