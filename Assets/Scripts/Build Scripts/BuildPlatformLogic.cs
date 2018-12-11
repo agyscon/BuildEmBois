@@ -58,11 +58,11 @@ public class BuildPlatformLogic : MonoBehaviour
                         wire.GetComponent<MeshRenderer>().material = current;
                     }
                     bot.SetActive(true);
-                    Vector3 buildPos = transform.forward;
+                    Vector3 buildPos = transform.position;
                     AudioSource.PlayClipAtPoint(switchSound, buildPos);
                 } else
                 {
-                    Vector3 buildPos = transform.forward;
+                    Vector3 buildPos = transform.position;
                     AudioSource.PlayClipAtPoint(buildSound, buildPos);
                 }
 

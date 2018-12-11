@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6948,7 +6948,7 @@ Prefab:
     - target: {fileID: 114175500870240770, guid: f7cb5e676d028a7489625e1d6de00580,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 23293397751943044, guid: f7cb5e676d028a7489625e1d6de00580,
         type: 2}
@@ -10722,6 +10722,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114364989237756914, guid: 637e618273cdc6848bac3053ef4a85d2,
+        type: 2}
+      propertyPath: stepSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4568498521705226, guid: 637e618273cdc6848bac3053ef4a85d2, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.93
@@ -10818,6 +10823,16 @@ Prefab:
       propertyPath: objectContainingPads
       value: 
       objectReference: {fileID: 621744293}
+    - target: {fileID: 114364989237756914, guid: 637e618273cdc6848bac3053ef4a85d2,
+        type: 2}
+      propertyPath: stepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c0be94221d26de42b873c828cd86317, type: 3}
+    - target: {fileID: 114364989237756914, guid: 637e618273cdc6848bac3053ef4a85d2,
+        type: 2}
+      propertyPath: stepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f05697b886eebc4aa52d685cf71c5c8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637e618273cdc6848bac3053ef4a85d2, type: 2}
   m_IsPrefabAsset: 0
