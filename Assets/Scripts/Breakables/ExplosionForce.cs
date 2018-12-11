@@ -74,10 +74,11 @@ public class ExplosionForce : MonoBehaviour {
                 }
             }
 
-            if (playSound)
-            {
-                AudioSource.PlayClipAtPoint(successfulPunch, explosionPos, .8f);
-            }
+        }
+
+        if (playSound)
+        {
+            AudioSource.PlayClipAtPoint(successfulPunch, explosionPos, .8f);
         }
 
     }
