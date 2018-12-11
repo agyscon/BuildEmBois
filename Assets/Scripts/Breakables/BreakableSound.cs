@@ -16,7 +16,6 @@ public class BreakableSound : MonoBehaviour {
 	}
     private void OnCollisionEnter(Collision collision)
     {
-        //print("yah");
         if (collision.impulse.magnitude > 2f && collision.gameObject.layer != 10)
         {
             AudioSource.PlayClipAtPoint(objectNoise, collision.contacts[0].point);

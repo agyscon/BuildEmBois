@@ -18,10 +18,6 @@ public class PadContainer : MonoBehaviour {
             botsList.Add(bots[i]);
 
         }
-        foreach(int bot in botsList)
-        {
-            print(bot);
-        }
     }
     public ArrayList GetBotsList()
     {
@@ -30,7 +26,6 @@ public class PadContainer : MonoBehaviour {
         {
             holder.Add(i);
         }
-        //print(holder.Count);
         botsList.Clear();
         return holder;
     }

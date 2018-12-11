@@ -112,7 +112,6 @@ public class BuildPlatformLogic : MonoBehaviour
 
     private void Activate(Collider other)
     {
-        //print(other.gameObject.name + ": " + other.gameObject.tag);
         if (other.gameObject.CompareTag("Player"))
         {
             player = other.gameObject.GetComponent<BotCollector>();
@@ -148,13 +147,7 @@ public class BuildPlatformLogic : MonoBehaviour
     {
         container.setIsBuilt(false);
         buildObject.SetActive(false);
-        //player.ReceiveBots(botsNeeded);
-        print("reached");
         ArrayList botIndices = container.GetBotsList();
-        foreach (int bot in botIndices)
-        {
-            print(bot);
-        }
         // offset the vertical position to accomidate bot height
         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         playerBotCollector.RegainBots(botIndices.Count, botIndices, targetPosition, isSwitch);

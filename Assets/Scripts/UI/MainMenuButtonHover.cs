@@ -16,7 +16,6 @@ public class MainMenuButtonHover : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        print("Hit");
         buttonText.text = ">" + buttonText.text + "<";
     }
     public void OnPointerExit(PointerEventData eventData)
