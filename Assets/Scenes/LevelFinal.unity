@@ -3369,6 +3369,11 @@ Prefab:
       propertyPath: stepSounds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 2f05697b886eebc4aa52d685cf71c5c8, type: 3}
+    - target: {fileID: 114597671000126116, guid: 637e618273cdc6848bac3053ef4a85d2,
+        type: 2}
+      propertyPath: thankYou
+      value: 
+      objectReference: {fileID: 8300000, guid: 82967f6a6dc662445a17c2fb728ac26c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637e618273cdc6848bac3053ef4a85d2, type: 2}
   m_IsPrefabAsset: 0
@@ -4736,7 +4741,7 @@ Prefab:
     - target: {fileID: 114963651609968866, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
       propertyPath: m_Text
-      value: 0
+      value: 0/15
       objectReference: {fileID: 0}
     - target: {fileID: 114850846206661762, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
@@ -4823,6 +4828,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -17.039978
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850846206661762, guid: 10e71f1713ad25a44bba2c229b8429bb,
+        type: 2}
+      propertyPath: requiredNumber
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e71f1713ad25a44bba2c229b8429bb, type: 2}

@@ -10,6 +10,7 @@ public class BotCollector : MonoBehaviour {
     public GameObject overlay;
     public List<GameObject> totalBots = new List<GameObject>();
     public GameObject objectContainingPads;
+    public AudioClip thankYou;
 
     // Use this for initialization
     void Start () {
@@ -33,6 +34,7 @@ public class BotCollector : MonoBehaviour {
 
     public void ReceiveBots(int num, GameObject bot)
     {
+        AudioSource.PlayClipAtPoint(thankYou, bot.transform.position);
         totalBots.Add(bot);
         bots += num;
         overlayScript.setNumBots(bots);
