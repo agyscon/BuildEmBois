@@ -12880,6 +12880,11 @@ Prefab:
       propertyPath: requiredNumber
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114708367131149006, guid: 10e71f1713ad25a44bba2c229b8429bb,
+        type: 2}
+      propertyPath: m_Text
+      value: '"E" To Build and Debuild'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e71f1713ad25a44bba2c229b8429bb, type: 2}
   m_IsPrefabAsset: 0
