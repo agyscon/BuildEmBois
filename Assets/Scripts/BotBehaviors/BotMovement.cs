@@ -17,27 +17,36 @@ public class BotMovement: MonoBehaviour {
     // The bot another bot bumped into. Let's the bot know when to move to avoid crowding.
     private BotMovement bumpedBot;
     private bool jumping;
+    private Transform dest;
+    private bool readyToBuild;
 
 
     void Start() {
         anim = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         jumping = false;
+        readyToBuild = false;
     }
 
     void OnEnable() {
         if (botMode != BotMode.Idle) {
             anim.SetBool("BootUp", true);
         }
+        Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
+        foreach (Collider c in colliders) {
+            c.enabled = true;
+        }
     }
-    public void SetState(BotMode mode)
-    {
+    public void SetState(BotMode mode) {
         botMode = mode;
     }
 
-    public BotMode GetState()
-    {
+    public BotMode GetState() {
         return botMode;
+    }
+
+    public void SetDest(Transform destination) {
+        dest = destination;
     }
 
     void Update() {
@@ -76,7 +85,20 @@ public class BotMovement: MonoBehaviour {
         }
         if (botMode == BotMode.Build)
         {
-            transform.gameObject.SetActive(false);
+            if (!jumping) {
+                print(readyToBuild);
+                if (!readyToBuild) {
+                    Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
+                    foreach (Collider c in colliders) {
+                        c.enabled = false;
+                    }
+                    navMeshAgent.isStopped = true;
+                    StartCoroutine(JumpToBuild());
+                } else {
+                    readyToBuild = false;
+                    transform.gameObject.SetActive(false);
+                }
+            }
         }
         if (gameObject.activeSelf) {
             anim.SetFloat("Y", navMeshAgent.velocity.magnitude / navMeshAgent.speed);
@@ -150,8 +172,7 @@ public class BotMovement: MonoBehaviour {
             }
         }
     }
-
-    private IEnumerator JumpOffMesh() {
+private IEnumerator JumpOffMesh() {
         jumping = true;
         OffMeshLinkData offMeshLinkData = navMeshAgent.currentOffMeshLinkData;
         // Find source and destination and adjust for bot height
@@ -201,7 +222,7 @@ public class BotMovement: MonoBehaviour {
             yield return null;
             timeElapsed += Time.deltaTime;
         }
-        // Lerp bot to start pos as necessary
+        // Lerp bot to end pos as necessary
         while (Vector3.Distance(transform.position, endPos) > 0.2f) {
             Vector3 lerpPos = transform.position;
             lerpPos.x = Mathf.Lerp(transform.position.x, endPos.x, 0.1f);
@@ -215,26 +236,56 @@ public class BotMovement: MonoBehaviour {
         jumping = false;
     }
 
-    private IEnumerator JumpToArea(Vector3 destination) {
+    private IEnumerator JumpToBuild() {
+        navMeshAgent.enabled = false;
         jumping = true;
-        OffMeshLinkData offMeshLinkData = navMeshAgent.currentOffMeshLinkData;
-        // Find source and destination and adjust for bot height
-        Vector3 startPos = offMeshLinkData.startPos;
-        startPos.y += 0.5f;
-        Vector3 endPos = offMeshLinkData.endPos;
-        endPos.y += 0.5f;
+        Vector3 startPos = transform.position;
+        Vector3 endPos = dest.position;
+        Quaternion endRot = dest.rotation;
         // Calculate highest point bot should jump to
         float maxHeight = Mathf.Max(startPos.y, endPos.y) + 1 + 0.05f * Mathf.Abs(startPos.y - endPos.y);
-        // Lerp bot to start pos as necessary
-        while (Vector3.Distance(transform.position, startPos) > 0.2f) {
-            Vector3 lerpPos = transform.position;
-            lerpPos.x = Mathf.Lerp(transform.position.x, startPos.x, 0.1f);
-            lerpPos.y = Mathf.Lerp(transform.position.y, startPos.y, 0.1f);
-            lerpPos.z = Mathf.Lerp(transform.position.z, startPos.z, 0.1f);
-            transform.position = lerpPos;
+        float timeElapsed = 0f;
+        anim.SetTrigger("JumpUp");
+        // Wait for jump to start
+        while (timeElapsed < 0.5f) {
             yield return null;
+            timeElapsed += Time.deltaTime;
+            anim.SetBool("Airborne", true);
         }
-        transform.position = startPos;
+        Vector3 pos = transform.position;
+        Quaternion quat = transform.rotation;
+        // Jump across gap
+        while (timeElapsed < 1.5f) {
+            pos.x = Mathf.SmoothStep(startPos.x, endPos.x, (timeElapsed - 0.5f));
+            pos.z = Mathf.SmoothStep(startPos.z, endPos.z, (timeElapsed - 0.5f));
+            quat = Quaternion.Slerp(transform.rotation, endRot, 0.05f);
+            if (timeElapsed < 1f) {
+                float amplitude = maxHeight - startPos.y;
+                pos.y = startPos.y + amplitude * Mathf.Sin(Mathf.PI * (timeElapsed - 0.5f));
+            } else {
+                float amplitude = maxHeight - endPos.y;
+                pos.y = endPos.y + amplitude * Mathf.Sin(Mathf.PI * (timeElapsed - 0.5f));
+            }
+            transform.position = pos;
+            transform.rotation = quat;
+            yield return null;
+            timeElapsed += Time.deltaTime;
+        }
+        anim.SetBool("Airborne", false);
+        jumping = false;
+        readyToBuild = true;
+    }
+
+    public void JumpToPad(Vector3 buildPadPosition) {
+        StartCoroutine(JumpOutOfBuild(buildPadPosition));
+    }
+
+    private IEnumerator JumpOutOfBuild(Vector3 buildPadPosition) {
+        jumping = true;
+        Vector3 startPos = transform.position;
+        Vector3 endPos = buildPadPosition;
+        // Calculate highest point bot should jump to
+        float maxHeight = Mathf.Max(startPos.y, endPos.y) + 1 + 0.05f * Mathf.Abs(startPos.y - endPos.y);
         float timeElapsed = 0f;
         anim.SetTrigger("JumpUp");
         // Wait for jump to start
@@ -265,18 +316,8 @@ public class BotMovement: MonoBehaviour {
             yield return null;
             timeElapsed += Time.deltaTime;
         }
-        // Lerp bot to start pos as necessary
-        while (Vector3.Distance(transform.position, endPos) > 0.2f) {
-            Vector3 lerpPos = transform.position;
-            lerpPos.x = Mathf.Lerp(transform.position.x, endPos.x, 0.1f);
-            lerpPos.y = Mathf.Lerp(transform.position.y, endPos.y, 0.1f);
-            lerpPos.z = Mathf.Lerp(transform.position.z, endPos.z, 0.1f);
-            transform.position = lerpPos;
-            yield return null;
-        }
-        transform.position = endPos;
-        navMeshAgent.CompleteOffMeshLink();
         jumping = false;
+        navMeshAgent.enabled = true;
     }
 
 }
