@@ -17,6 +17,8 @@ public class BuildPlatformLogic : MonoBehaviour
     public bool isSwitch = false;
     public GameObject bot;
     public GameObject[] wireWithotWithoutCurrent;
+    public AudioClip switchSound;
+    public AudioClip buildSound;
 
     // Use this for initialization
     void Start()
@@ -44,7 +46,6 @@ public class BuildPlatformLogic : MonoBehaviour
         {
             if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded && !container.getIsBuilt())
             {
-                print("whats going on");
                 buildObject.SetActive(true);
                 ArrayList botsUsed = player.LoseBots(botsNeeded);
                 container.addBots(botsUsed);
@@ -57,6 +58,12 @@ public class BuildPlatformLogic : MonoBehaviour
                         wire.GetComponent<MeshRenderer>().material = current;
                     }
                     bot.SetActive(true);
+                    Vector3 buildPos = transform.forward;
+                    AudioSource.PlayClipAtPoint(switchSound, buildPos);
+                } else
+                {
+                    Vector3 buildPos = transform.forward;
+                    AudioSource.PlayClipAtPoint(buildSound, buildPos);
                 }
 
             }

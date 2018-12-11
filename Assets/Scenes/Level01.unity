@@ -8516,6 +8516,8 @@ MonoBehaviour:
   bot: {fileID: 1290240495}
   wireWithotWithoutCurrent:
   - {fileID: 1492352872}
+  switchSound: {fileID: 8300000, guid: 707dd7dbb99b38d4192edbc6ede105da, type: 3}
+  buildSound: {fileID: 8300000, guid: bea025865662e3b448230317e4b2b1eb, type: 3}
 --- !u!135 &1290296821
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9225,6 +9227,8 @@ MonoBehaviour:
   bot: {fileID: 784496635}
   wireWithotWithoutCurrent:
   - {fileID: 1778856884}
+  switchSound: {fileID: 8300000, guid: 707dd7dbb99b38d4192edbc6ede105da, type: 3}
+  buildSound: {fileID: 8300000, guid: bea025865662e3b448230317e4b2b1eb, type: 3}
 --- !u!135 &1422530079
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12093,7 +12097,7 @@ MonoBehaviour:
   radius: 4
   power: 1500
   distanceInFront: 0.2
-  punchSound: {fileID: 8300000, guid: 24cf397d3b51a4147a55e33031c9d36f, type: 3}
+  punchSound: {fileID: 8300000, guid: e0ee4bb550333fc4cbe388a70820e712, type: 3}
 --- !u!1 &1749966668
 GameObject:
   m_ObjectHideFlags: 0
