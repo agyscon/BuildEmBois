@@ -76,7 +76,7 @@ public class ExplosionForce : MonoBehaviour {
 
             if (playSound)
             {
-                AudioSource.PlayClipAtPoint(successfulPunch, explosionPos);
+                AudioSource.PlayClipAtPoint(successfulPunch, explosionPos, .8f);
             }
         }
 
