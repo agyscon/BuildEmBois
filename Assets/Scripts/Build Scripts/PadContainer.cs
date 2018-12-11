@@ -7,6 +7,7 @@ public class PadContainer : MonoBehaviour {
     public ArrayList botsList = new ArrayList();
 
     private bool isBuilt;
+    private bool isBuilding;
 
     // Use this for initialization
     public void addBots(ArrayList bots)
@@ -44,5 +45,13 @@ public class PadContainer : MonoBehaviour {
         return isBuilt;
     }
 
+    public void setIsBuilding(bool building)
+    {
+        isBuilding = building;
+    }
 
+    public bool getIsBuilding()
+    {
+        return isBuilding;
+    }
 }
