@@ -18,7 +18,7 @@ public class BreakableSound : MonoBehaviour {
     {
         if (collision.impulse.magnitude > 2f && collision.gameObject.layer != 10)
         {
-            AudioSource.PlayClipAtPoint(objectNoise, collision.contacts[0].point);
+            //AudioSource.PlayClipAtPoint(objectNoise, collision.contacts[0].point);
         }
     }
 }
