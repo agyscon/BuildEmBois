@@ -7,6 +7,7 @@ public class WorldOverlayScript : MonoBehaviour {
     public Text numBotsText;
     public Text buttonPrompt;
     public Text neededBots;
+    public Text punchPrompt;
 	// Use this for initialization
 	void Start () {
 	}
@@ -21,6 +22,11 @@ public class WorldOverlayScript : MonoBehaviour {
         neededBots.enabled = isActive;
         neededBots.text = "x" + requiredBots;
         buttonPrompt.enabled = isActive;
+    }
+
+    public void setActivePunchPrompt(bool isActive)
+    {
+        punchPrompt.enabled = isActive;
     }
 
 
