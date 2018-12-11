@@ -48,6 +48,8 @@ public class BotCollector : MonoBehaviour {
             if (botScript != null) {
                 if (!isSwitch) {
                     botScript.JumpToPad(buildPadPosition);
+                } else {
+                    botScript.ReactivateNavMeshAgent();
                 }
                 botScript.SetState(BotMovement.BotMode.Follow);
             }

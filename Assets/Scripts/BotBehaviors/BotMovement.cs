@@ -278,6 +278,10 @@ private IEnumerator JumpOffMesh() {
         readyToBuild = true;
     }
 
+    public void ReactivateNavMeshAgent() {
+        navMeshAgent.enabled = true;
+    }
+
     public void JumpToPad(Vector3 buildPadPosition) {
         StartCoroutine(JumpOutOfBuild(buildPadPosition));
     }
