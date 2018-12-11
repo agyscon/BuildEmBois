@@ -7,13 +7,14 @@ public class WorldOverlayScript : MonoBehaviour {
     public Text numBotsText;
     public Text buttonPrompt;
     public Text neededBots;
+    public int requiredNumber;
 	// Use this for initialization
 	void Start () {
 	}
 
     public void setNumBots(int n)
     {
-        numBotsText.text = n + "";
+        numBotsText.text = n + "/" + requiredNumber;
     }
 
     public void setActiveButtonPrompt(bool isActive, int requiredBots)
