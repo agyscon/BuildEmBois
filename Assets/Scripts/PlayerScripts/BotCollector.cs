@@ -39,20 +39,19 @@ public class BotCollector : MonoBehaviour {
         print("bot recieved");
     }
 
-    public void RegainBots(int num, ArrayList botList, Vector3 targetPosition)
+    public void RegainBots(int num, ArrayList botList, Vector3 buildPadPosition, bool isSwitch)
     {
-        //foreach (int bot in botList)
-        //{
-        //    print(bot);
-        //}
         for (int i = 0; i < botList.Count; i++)
         {
             GameObject usedBot = totalBots[(int)botList[i]];
-            if (targetPosition != null) {
-                usedBot.transform.position = targetPosition;
-            }
+            BotMovement botScript = usedBot.GetComponent<BotMovement>();
             usedBot.SetActive(true);
-            usedBot.GetComponent<BotMovement>().SetState(BotMovement.BotMode.Follow);
+            if (botScript != null) {
+                if (!isSwitch) {
+                    botScript.JumpToPad(buildPadPosition);
+                }
+                botScript.SetState(BotMovement.BotMode.Follow);
+            }
 
         }
         bots += num;
@@ -60,7 +59,7 @@ public class BotCollector : MonoBehaviour {
         
     }
 
-    public ArrayList LoseBots(int num)
+    public ArrayList LoseBots(int num, Transform destination)
     {
         ArrayList botsUsed = new ArrayList();
         int numToUse = num;
@@ -73,6 +72,7 @@ public class BotCollector : MonoBehaviour {
             BotMovement botScript = bot.GetComponent<BotMovement>();
             if (botScript.GetState() == BotMovement.BotMode.Follow || botScript.GetState() == BotMovement.BotMode.Stopped)
             {
+                botScript.SetDest(destination);
                 botScript.SetState(BotMovement.BotMode.Build);
                 numToUse--;
                 botsUsed.Add(i);
