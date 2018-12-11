@@ -17,12 +17,9 @@ public class BotMovement: MonoBehaviour {
     // The bot another bot bumped into. Let's the bot know when to move to avoid crowding.
     private BotMovement bumpedBot;
     private bool jumping;
-<<<<<<< HEAD
     private Transform dest;
     private bool readyToBuild;
-=======
     public AudioClip[] stepSounds;
->>>>>>> master
 
 
     void Start() {
