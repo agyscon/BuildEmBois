@@ -35,7 +35,6 @@ public class ExplosionForce : MonoBehaviour {
         bool playSound = false;
         Vector3 explosionPos = transform.forward * distanceInFront;
         Debug.DrawRay(transform.forward, explosionPos);
-        //Debug.Log(transform.TransformPoint(transform.forward));
         explosionPos = (transform.TransformPoint(explosionPos));
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         
@@ -51,7 +50,6 @@ public class ExplosionForce : MonoBehaviour {
                 pieces = breakScript.breakObject();
 
             }
-            //print(rb.);
             if (rb != null && rb.gameObject.layer == punchableLayer)
             {
                 playSound = true;
@@ -66,7 +64,6 @@ public class ExplosionForce : MonoBehaviour {
                 {
                     counter++;
                     Rigidbody childRb = child.GetComponent<Rigidbody>();
-                    //print(punchableLayer);
                     if (childRb != null && childRb.gameObject.layer == punchableLayer)
                     {
                         childRb.isKinematic = false;
@@ -75,13 +72,8 @@ public class ExplosionForce : MonoBehaviour {
                     }
 
                 }
-                //print(counter);
             }
 
-            else
-            {
-                //Debug.Log("Well this sucks");
-            }
             if (playSound)
             {
                 AudioSource.PlayClipAtPoint(successfulPunch, explosionPos);

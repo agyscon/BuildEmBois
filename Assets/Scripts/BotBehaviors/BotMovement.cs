@@ -55,20 +55,22 @@ public class BotMovement: MonoBehaviour {
             StartCoroutine(JumpOffMesh());
         }
         if (botMode == BotMode.Follow) {
-            if (Vector3.Distance(FlattenTransform(followTarget.position), FlattenTransform(navMeshAgent.destination)) > 0.5f) {
-                if (!navMeshAgent.pathPending) {
-                    navMeshAgent.SetDestination((followTarget.position));
-                }
-                anim.SetBool("IsBlock", false);
-                anim.SetBool("Walking", true);
-                if (navMeshAgent.isStopped) {
+            if (navMeshAgent.enabled) {
+                if (Vector3.Distance(FlattenTransform(followTarget.position), FlattenTransform(navMeshAgent.destination)) > 0.5f) {
+                    if (!navMeshAgent.pathPending) {
+                        navMeshAgent.SetDestination((followTarget.position));
+                    }
+                    anim.SetBool("IsBlock", false);
+                    anim.SetBool("Walking", true);
+                    if (navMeshAgent.isStopped) {
+                        anim.SetBool("Walking", false);
+                        botMode = BotMode.Stopped;
+                    }
+                } else if (navMeshAgent.remainingDistance <= 3f) {
                     anim.SetBool("Walking", false);
+                    navMeshAgent.isStopped = true;
                     botMode = BotMode.Stopped;
                 }
-            } else if (navMeshAgent.remainingDistance <= 3f) {
-                anim.SetBool("Walking", false);
-                navMeshAgent.isStopped = true;
-                botMode = BotMode.Stopped;
             }
         } else if (botMode == BotMode.Stopped) {
             if (bumpedBot != null) {
@@ -87,13 +89,12 @@ public class BotMovement: MonoBehaviour {
         if (botMode == BotMode.Build)
         {
             if (!jumping) {
-                print(readyToBuild);
                 if (!readyToBuild) {
                     Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
                     foreach (Collider c in colliders) {
                         c.enabled = false;
                     }
-                    navMeshAgent.isStopped = true;
+                    if (navMeshAgent.enabled) navMeshAgent.isStopped = true;
                     StartCoroutine(JumpToBuild());
                 } else {
                     readyToBuild = false;
@@ -167,7 +168,7 @@ public class BotMovement: MonoBehaviour {
             if (botScript.GetState() == BotMode.Stopped)
             {
                 anim.SetBool("Walking", false);
-                navMeshAgent.isStopped = true;
+                if (navMeshAgent.enabled) navMeshAgent.isStopped = true;
                 botMode = BotMode.Stopped;
                 bumpedBot = botScript;
             }
@@ -275,6 +276,10 @@ private IEnumerator JumpOffMesh() {
         anim.SetBool("Airborne", false);
         jumping = false;
         readyToBuild = true;
+    }
+
+    public void ReactivateNavMeshAgent() {
+        navMeshAgent.enabled = true;
     }
 
     public void JumpToPad(Vector3 buildPadPosition) {
