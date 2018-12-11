@@ -177,7 +177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"B" To Build / "V" to Debuild'
+  m_Text: '"E" To Build and Debuild'
 --- !u!114 &114850846206661762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,6 +192,8 @@ MonoBehaviour:
   numBotsText: {fileID: 114963651609968866}
   buttonPrompt: {fileID: 114708367131149006}
   neededBots: {fileID: 0}
+  punchPrompt: {fileID: 0}
+  requiredNumber: 0
 --- !u!114 &114963651609968866
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -44,12 +44,12 @@ public class BuildPlatformLogic : MonoBehaviour
     {
         if (inCollider)
         {
-            if (Input.GetKeyDown("b") && player != null && player.getBots() >= botsNeeded && !container.getIsBuilt() && !container.getIsBuilding())
+            if (Input.GetKeyDown("e") && player != null && player.getBots() >= botsNeeded && !container.getIsBuilt() && !container.getIsBuilding())
             {
                 container.setIsBuilding(true);
                 StartCoroutine(delayedBuild());
             }
-            if (Input.GetKeyDown("v") && buildObject.activeSelf)
+            if (Input.GetKeyDown("e") && buildObject.activeSelf)
             {
                 deactivatePlatform(player);
                 deactivateSwitch(player);

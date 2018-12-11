@@ -23,18 +23,14 @@ public class LineBreak : MonoBehaviour {
     {
         if (inCollider)
         {
-            if (Input.GetKeyDown("b") && player != null && player.getBots() > 0)
+            if (Input.GetKeyDown("e") && player != null && player.getBots() > 0)
             {
                 bot.SetActive(true);
-                //player.LoseBot();
                 controller.powerCheck();
-
-                // TODO: Bot animation here
             }
-            if (Input.GetKeyDown("v") && self.activeSelf)
+            if (Input.GetKeyDown("e") && self.activeSelf)
             {
                 bot.SetActive(false);
-                //player.AddBot();
                 controller.powerCheck();
             }
         }
