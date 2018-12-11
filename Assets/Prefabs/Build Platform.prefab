@@ -165,6 +165,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildObject: {fileID: 0}
   botsNeeded: 1
+  overlay: {fileID: 0}
+  isSwitch: 0
+  bot: {fileID: 0}
+  wireWithotWithoutCurrent: []
+  switchSound: {fileID: 8300000, guid: 707dd7dbb99b38d4192edbc6ede105da, type: 3}
+  buildSound: {fileID: 8300000, guid: bea025865662e3b448230317e4b2b1eb, type: 3}
 --- !u!136 &136628020124935290
 CapsuleCollider:
   m_ObjectHideFlags: 1
