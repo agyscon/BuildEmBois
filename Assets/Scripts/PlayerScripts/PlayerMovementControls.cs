@@ -18,6 +18,7 @@ public class PlayerMovementControls : MonoBehaviour {
 
     private Rigidbody playerRigidbody;
     private Animator anim;
+    public AudioClip[] stepSounds;
 
     void Awake() {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -113,6 +114,13 @@ public class PlayerMovementControls : MonoBehaviour {
             anim.SetTrigger("JumpUp");
             anim.SetBool("Airborne", true);
         }
+    }
+
+    public void Step()
+    {
+        Vector3 stepPos = transform.position;
+        
+        AudioSource.PlayClipAtPoint(this.stepSounds[Random.Range(0, stepSounds.Length)], stepPos);
     }
 
 }

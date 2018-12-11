@@ -23,7 +23,7 @@ public class ExplosionForce : MonoBehaviour {
         if (Input.GetKeyDown("mouse 0"))
         {
             hitForce();
-            Vector3 explosionPos = transform.forward * distanceInFront;
+            Vector3 explosionPos = transform.position;
             AudioSource.PlayClipAtPoint(punchSound, explosionPos);
         }
 		

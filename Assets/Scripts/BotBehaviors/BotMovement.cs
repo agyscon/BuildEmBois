@@ -17,8 +17,12 @@ public class BotMovement: MonoBehaviour {
     // The bot another bot bumped into. Let's the bot know when to move to avoid crowding.
     private BotMovement bumpedBot;
     private bool jumping;
+<<<<<<< HEAD
     private Transform dest;
     private bool readyToBuild;
+=======
+    public AudioClip[] stepSounds;
+>>>>>>> master
 
 
     void Start() {
@@ -320,4 +324,10 @@ private IEnumerator JumpOffMesh() {
         navMeshAgent.enabled = true;
     }
 
+    public void Step()
+    {
+        Vector3 stepPos = transform.position;
+
+        AudioSource.PlayClipAtPoint(this.stepSounds[Random.Range(0, stepSounds.Length)], stepPos, .1f);
+    }
 }

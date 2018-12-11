@@ -12,7 +12,7 @@ public class Bounce : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Rigidbody>().velocity = (Vector3.up * speed);
-            Vector3 bouncePos = transform.forward;
+            Vector3 bouncePos = transform.position;
             AudioSource.PlayClipAtPoint(bounceSound, bouncePos);
 
         }
