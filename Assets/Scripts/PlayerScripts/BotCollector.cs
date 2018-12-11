@@ -39,7 +39,7 @@ public class BotCollector : MonoBehaviour {
         print("bot recieved");
     }
 
-    public void RegainBots(int num, ArrayList botList)
+    public void RegainBots(int num, ArrayList botList, Vector3 targetPosition)
     {
         //foreach (int bot in botList)
         //{
@@ -48,6 +48,9 @@ public class BotCollector : MonoBehaviour {
         for (int i = 0; i < botList.Count; i++)
         {
             GameObject usedBot = totalBots[(int)botList[i]];
+            if (targetPosition != null) {
+                usedBot.transform.position = targetPosition;
+            }
             usedBot.SetActive(true);
             usedBot.GetComponent<BotMovement>().SetState(BotMovement.BotMode.Follow);
 
