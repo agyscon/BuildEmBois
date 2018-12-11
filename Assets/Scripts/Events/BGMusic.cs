@@ -10,6 +10,7 @@ public class BGMusic : MonoBehaviour {
     {
         get { return instance; }
     }
+
     void Awake()
     {
         if (instance != null && instance != this)
