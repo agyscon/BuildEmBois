@@ -7515,6 +7515,7 @@ MonoBehaviour:
   power: 1500
   distanceInFront: 0.2
   punchSound: {fileID: 8300000, guid: 927c9c87419444947964fa5c13a7c4b9, type: 3}
+  successfulPunch: {fileID: 8300000, guid: e0ee4bb550333fc4cbe388a70820e712, type: 3}
 --- !u!4 &864740851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4568498521705226, guid: 637e618273cdc6848bac3053ef4a85d2,
