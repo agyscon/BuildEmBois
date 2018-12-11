@@ -891,6 +891,9 @@ MonoBehaviour:
   botMode: 2
   followTarget: {fileID: 4568498521705226, guid: 637e618273cdc6848bac3053ef4a85d2,
     type: 2}
+  stepSounds:
+  - {fileID: 8300000, guid: 8c0be94221d26de42b873c828cd86317, type: 3}
+  - {fileID: 8300000, guid: 2f05697b886eebc4aa52d685cf71c5c8, type: 3}
 --- !u!114 &114748553692969524
 MonoBehaviour:
   m_ObjectHideFlags: 1
