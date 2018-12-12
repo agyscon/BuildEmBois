@@ -1518,7 +1518,8 @@ MonoBehaviour:
   m_Text: "Assets and Materials Used\n\nYughues Free Metal Materials from Unity Asset
     Store\n\nWater Shader (Pavel Valakh from Unity Asset Store)\r\n\r\nTools Picture(topform8)\r\n\r\nTarget
     Picture\r\nhttp://pngimg.com/download/27490\r\n\r\nPez Font (BRIDGEco)\r\nhttps://www.dafont.com/pez.font\r\n\r\nStrenuous
-    Font (Typodermic Fonts)\r\nhttps://www.dafont.com/strenuous.font\r\n"
+    Font (Typodermic Fonts)\r\nhttps://www.dafont.com/strenuous.font\r\n\nKrabular
+    Font (Misha and Sasha)\r\nhttp://russianfonts.ru/fonts/krabuler/krabuler-typeface.html\r\n\n"
 --- !u!222 &1630432740
 CanvasRenderer:
   m_ObjectHideFlags: 0
