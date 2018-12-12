@@ -385,8 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: MainMenu
-  blackScreen: {fileID: 225473350656360228, guid: 980f33d96431a4246b58fdd2212cf908,
-    type: 2}
+  blackScreen: {fileID: 0}
 --- !u!114 &114244107686301606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -521,7 +520,9 @@ MonoBehaviour:
 
     R: Call all bots
 
-    E: Build/Debuild'
+    E: Build/Debuild
+
+    Esc: Pause/Resume'
 --- !u!114 &114355526960342042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1388,11 +1389,11 @@ RectTransform:
   m_Father: {fileID: 224129983004523302}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 280, y: 220}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: 0}
+  m_SizeDelta: {x: 280, y: 0}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224688222240466036
 RectTransform:
   m_ObjectHideFlags: 1
