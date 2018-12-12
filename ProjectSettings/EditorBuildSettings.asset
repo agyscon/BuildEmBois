@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: 
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/InBetweenScene.unity
+    path: Assets/Scenes/InBetweenScene1.unity
     guid: bfa2325555c7e0f47a98d71803d2e23e
   - enabled: 1
     path: Assets/Scenes/Level01.unity
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: eea151210e9c09144837a54fd2659127
+  - enabled: 1
+    path: Assets/Scenes/InBetweenScene2.unity
+    guid: 89bcb049f7a42584581907ce5b5a35a8
   m_configObjects: {}
