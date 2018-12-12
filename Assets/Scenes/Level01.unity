@@ -12843,7 +12843,7 @@ Prefab:
     - target: {fileID: 224174860441051456, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224240973433486484, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
@@ -12853,7 +12853,7 @@ Prefab:
     - target: {fileID: 224804131557161380, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114496355549234454, guid: 10e71f1713ad25a44bba2c229b8429bb,
         type: 2}
