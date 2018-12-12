@@ -28,6 +28,7 @@ public class ExitTransition : MonoBehaviour {
         if (c.tag.Equals("Player")) {
             BotCollector playerInventory = c.GetComponent<BotCollector>();
             if (playerInventory.getBots() == numBots) {
+                StartCoroutine(ExitScene());
             } else {
                 TipPanel.GetInstance().SetText("You're missing bots.");
                 TipPanel.GetInstance().SetVisible(true);
