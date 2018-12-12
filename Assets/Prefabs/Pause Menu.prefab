@@ -478,11 +478,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 978a800811b5009478f4b449d9e6a093, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: e52f3fd05931dfd42a5457535cae9fa1, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -492,13 +492,16 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Objective: Reach the end, and collect bots!
 
-    Space: Jump
 
     WASD: Move
 
+    Space: Jump
+
     Left Click: Hit
 
-    R: Call all bots'
+    R: Call all bots
+
+    E: Build/Debuild'
 --- !u!114 &114355526960342042
 MonoBehaviour:
   m_ObjectHideFlags: 1
