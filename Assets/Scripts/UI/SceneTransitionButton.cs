@@ -3,25 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ToMenu : MonoBehaviour {
+public class SceneTransitionButton : MonoBehaviour {
+
+    public string nextSceneName; 
 
     [SerializeField] CanvasGroup blackScreen;
-
+    
     // This method takes whatever was specified fr the 
     // string name to be the next scene to switch to
-    public void MenuButtonPressed()
+	public void ButtonPressed()
     {
-        StartCoroutine(LoadMainMenu());
+        StartCoroutine(TransitionCoroutine());
     }
 
-    private IEnumerator LoadMainMenu() {
+    private IEnumerator TransitionCoroutine() {
         if (blackScreen != null) {
             blackScreen.blocksRaycasts = true;
+            Time.timeScale = 1;
             for (float i = 0; i < 1f; i += Time.unscaledDeltaTime) {
-                blackScreen.alpha = Mathf.SmoothStep(0, 1, i);
+                blackScreen.alpha = Mathf.SmoothStep(0f, 1f, i);
                 yield return null;
             }
         }
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(nextSceneName);
     }
+
 }

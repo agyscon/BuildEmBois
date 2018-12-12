@@ -8,6 +8,8 @@ public class ExitTransition : MonoBehaviour {
     public int numBots = 7;
     public string nextSceneName;
 
+    [SerializeField] private CanvasGroup blackScreen;
+
     void OnTriggerEnter(Collider c) {
         ExitConditions(c);
     }
@@ -26,11 +28,21 @@ public class ExitTransition : MonoBehaviour {
         if (c.tag.Equals("Player")) {
             BotCollector playerInventory = c.GetComponent<BotCollector>();
             if (playerInventory.getBots() == numBots) {
-                SceneManager.LoadScene(nextSceneName);
             } else {
                 TipPanel.GetInstance().SetText("You're missing bots.");
                 TipPanel.GetInstance().SetVisible(true);
             }
         }
+    }
+
+    IEnumerator ExitScene() {
+        if (blackScreen != null) {
+            blackScreen.blocksRaycasts = true;
+            for (float i = 0; i < 1f; i += Time.unscaledDeltaTime) {
+                blackScreen.alpha = Mathf.SmoothStep(0, 1, i);
+                yield return null;
+            }
+        }
+        SceneManager.LoadScene(nextSceneName);
     }
 }

@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 114452922070555392}
   - component: {fileID: 114891013617541234}
   - component: {fileID: 114039548708983676}
-  - component: {fileID: 114236751307457336}
+  - component: {fileID: 114191609643369332}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114236751307457336
+--- !u!114 &114191609643369332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,10 +381,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721267740244074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5d261b1620b77144a05295e86044121, type: 3}
+  m_Script: {fileID: 11500000, guid: 367aac97ecc0edf4ba4047d684726a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: MainMenu
+  blackScreen: {fileID: 225473350656360228, guid: 980f33d96431a4246b58fdd2212cf908,
+    type: 2}
 --- !u!114 &114244107686301606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -448,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a40a28039b21934da40d48a315837b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackScreen: {fileID: 0}
 --- !u!114 &114286065746420222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -918,8 +921,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114236751307457336}
-        m_MethodName: StartButtonPressed
+      - m_Target: {fileID: 114191609643369332}
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
